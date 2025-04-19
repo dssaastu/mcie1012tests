@@ -4,7 +4,7 @@
     <!-- IMPORTANT: Make sure your text editor saves this file with UTF-8 Encoding! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logic and Language Quiz</title> <!-- Changed Title -->
+    <title>Ethical Decision Making Quiz - Chapter 3</title> <!-- Changed Title -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
@@ -44,8 +44,8 @@
     </div>
 
     <div id="quiz-form" class="hidden">
-        <h1>Logic and Language Quiz - Chapter 3</h1> <!-- Changed Title -->
-        <form id="mcie-quiz"> <!-- ID Kept, content changed -->
+        <h1>Ethical Decision Making Quiz - Chapter 3</h1> <!-- Changed Title -->
+        <form id="mcie-quiz"> <!-- ID Kept, but content changed -->
             <!-- Student Information -->
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -68,357 +68,218 @@
                 <input type="tel" id="phone" name="phone" required>
             </div>
 
-            <!-- Logic and Language Multiple-Choice Questions -->
+            <!-- Chapter 3 Multiple-Choice Questions -->
             <div class="form-group">
-                 <label>1. Why is close attention to language crucial for interpreting, analyzing, and evaluating arguments?</label>
-                 <input type="radio" name="q1" value="A" required> A) Language is primarily used for expressing emotions.<br>
-                 <input type="radio" name="q1" value="B"> B) Correct reasoning can only be conveyed through clear and understandable language.<br>
-                 <input type="radio" name="q1" value="C"> C) All logical errors stem from historical misunderstandings.<br>
-                 <input type="radio" name="q1" value="D"> D) Philosophy aims to create new languages.
-            </div>
-            <div class="form-group">
-                 <label>2. Philosophy of Language is primarily concerned with:</label>
-                 <input type="radio" name="q2" value="A" required> A) The grammatical rules of specific languages like English or French.<br>
-                 <input type="radio" name="q2" value="B"> B) The origins of language, the nature of meaning, and the language-reality relationship.<br>
-                 <input type="radio" name="q2" value="C"> C) Translating ancient philosophical texts accurately.<br>
-                 <input type="radio" name="q2" value="D"> D) The historical development of word pronunciations.
-            </div>
-            <div class="form-group">
-                 <label>3. Semiotics studies:</label>
-                 <input type="radio" name="q3" value="A" required> A) The evolution of sentence structure over time.<br>
-                 <input type="radio" name="q3" value="B"> B) The relationship between philosophy and linguistics.<br>
-                 <input type="radio" name="q3" value="C"> C) Sign processes in communication and how meaning is constructed.<br>
-                 <input type="radio" name="q3" value="D"> D) The cognitive processes involved in language acquisition.
-            </div>
-            <div class="form-group">
-                 <label>4. How does Philosophy of Language differ from Linguistics?</label>
-                 <input type="radio" name="q4" value="A" required> A) Linguistics focuses on meaning, while Philosophy of Language focuses on grammar.<br>
-                 <input type="radio" name="q4" value="B"> B) Philosophy of Language asks broader questions about meaning and reality, while Linguistics studies the structure and rules of specific languages.<br>
-                 <input type="radio" name="q4" value="C"> C) There is no significant difference; the terms are interchangeable.<br>
-                 <input type="radio" name="q4" value="D"> D) Philosophy of Language is a subfield of Linguistics.
-            </div>
-            <div class="form-group">
-                 <label>5. Noam Chomsky's concept of "universal grammar" suggests that humans:</label>
-                 <input type="radio" name="q5" value="A" required> A) Learn all grammatical rules purely from experience.<br>
-                 <input type="radio" name="q5" value="B"> B) Are born with an innate set of linguistic principles.<br>
-                 <input type="radio" name="q5" value="C"> C) Use language primarily for symbolic manipulation.<br>
-                 <input type="radio" name="q5" value="D"> D) Can only understand one language fluently.
-            </div>
-            <div class="form-group">
-                 <label>6. Semantic Holism is the view that meaning is primarily attributed to:</label>
-                 <input type="radio" name="q6" value="A" required> A) Individual words.<br>
-                 <input type="radio" name="q6" value="B"> B) Individual sentences.<br>
-                 <input type="radio" name="q6" value="C"> C) A whole language system.<br>
-                 <input type="radio" name="q6" value="D"> D) Specific speech acts.
-            </div>
-            <div class="form-group">
-                 <label>7. Which ancient philosopher held that the meaning of a predicate is established through abstracting similarities between individual things (later known as Nominalism)?</label>
-                 <input type="radio" name="q7" value="A" required> A) Plato<br>
-                 <input type="radio" name="q7" value="B"> B) Socrates<br>
-                 <input type="radio" name="q7" value="C"> C) Zeno<br>
-                 <input type="radio" name="q7" value="D"> D) Aristotle
-            </div>
-            <div class="form-group">
-                 <label>8. The Stoic philosophers contributed the concept of lektón, which relates to:</label>
-                 <input type="radio" name="q8" value="A" required> A) The grammatical parts of speech.<br>
-                 <input type="radio" name="q8" value="B"> B) The meaning or sense of a term, leading to the idea of a proposition.<br>
-                 <input type="radio" name="q8" value="C"> C) The rules of syntax.<br>
-                 <input type="radio" name="q8" value="D"> D) The historical origin of words.
-            </div>
-            <div class="form-group">
-                 <label>9. Which philosophical movement significantly emphasized the philosophy of language in the late 19th and 20th centuries?</label>
-                 <input type="radio" name="q9" value="A" required> A) Existentialism<br>
-                 <input type="radio" name="q9" value="B"> B) Stoicism<br>
-                 <input type="radio" name="q9" value="C"> C) Scholasticism<br>
-                 <input type="radio" name="q9" value="D"> D) Analytic Philosophy
-            </div>
-            <div class="form-group">
-                 <label>10. Conceptual meaning refers primarily to:</label>
-                 <input type="radio" name="q10" value="A" required> A) The emotional associations of a word.<br>
-                 <input type="radio" name="q10" value="B"> B) The dictionary definition or semantic features of a word.<br>
-                 <input type="radio" name="q10" value="C"> C) The way a word is used in a specific speech act.<br>
-                 <input type="radio" name="q10" value="D"> D) The things in the world a word refers to.
-            </div>
-            <div class="form-group">
-                 <label>11. Associative meaning refers to:</label>
-                 <input type="radio" name="q11" value="A" required> A) The literal definition of a word.<br>
-                 <input type="radio" name="q11" value="B"> B) The grammatical function of a word.<br>
-                 <input type="radio" name="q11" value="C"> C) The individual mental understandings and connotations (social, affective, etc.) of a word.<br>
-                 <input type="radio" name="q11" value="D"> D) The truth conditions of a sentence.
-            </div>
-            <div class="form-group">
-                 <label>12. Idea theories of meaning claim that meanings are:</label>
-                 <input type="radio" name="q12" value="A" required> A) Conditions under which a statement is true.<br>
-                 <input type="radio" name="q12" value="B"> B) Purely mental contents provoked by signs.<br>
-                 <input type="radio" name="q12" value="C"> C) Determined by the consequences of application.<br>
-                 <input type="radio" name="q12" value="D"> D) The actual things in the world referred to by signs.
-            </div>
-            <div class="form-group">
-                 <label>13. Truth-conditional theories hold that the meaning of an expression is primarily:</label>
-                 <input type="radio" name="q13" value="A" required> A) Its relationship to other words in the language.<br>
-                 <input type="radio" name="q13" value="B"> B) The mental image it evokes.<br>
-                 <input type="radio" name="q13" value="C"> C) The conditions under which it can be true or false.<br>
-                 <input type="radio" name="q13" value="D"> D) Its conventional usage in speech acts.
-            </div>
-            <div class="form-group">
-                 <label>14. Use theories of meaning emphasize:</label>
-                 <input type="radio" name="q14" value="A" required> A) The dictionary definitions of words.<br>
-                 <input type="radio" name="q14" value="B"> B) The mental states of the speaker.<br>
-                 <input type="radio" name="q14" value="C"> C) The role of speech acts and particular utterances in determining meaning.<br>
-                 <input type="radio" name="q14" value="D"> D) The objects in the world that words refer to.
-            </div>
-            <div class="form-group">
-                 <label>15. Reference theories (semantic externalism) view meaning as:</label>
-                 <input type="radio" name="q15" value="A" required> A) Internal mental concepts.<br>
-                 <input type="radio" name="q15" value="B"> B) The actual things in the world connected to signs.<br>
-                 <input type="radio" name="q15" value="C"> C) The rules governing language use.<br>
-                 <input type="radio" name="q15" value="D"> D) The method of verifying a sentence.
-            </div>
-            <div class="form-group">
-                 <label>16. Verificationist theories associate meaning with:</label>
-                 <input type="radio" name="q16" value="A" required> A) The speaker's intention.<br>
-                 <input type="radio" name="q16" value="B"> B) The consequences of a sentence's application.<br>
-                 <input type="radio" name="q16" value="C"> C) The method of verifying or falsifying a sentence.<br>
-                 <input type="radio" name="q16" value="D"> D) The historical origin of the words used.
-            </div>
-            <div class="form-group">
-                 <label>17. The two primary linguistic functions relevant for logic are conveying information and:</label>
-                 <input type="radio" name="q17" value="A" required> A) Giving commands.<br>
-                 <input type="radio" name="q17" value="B"> B) Asking questions.<br>
-                 <input type="radio" name="q17" value="C"> C) Expressing or evoking feelings.<br>
-                 <input type="radio" name="q17" value="D"> D) Telling jokes.
-            </div>
-            <div class="form-group">
-                 <label>18. Terminology that primarily conveys information is said to have:</label>
-                 <input type="radio" name="q18" value="A" required> A) Emotive meaning.<br>
-                 <input type="radio" name="q18" value="B"> B) Associative meaning.<br>
-                 <input type="radio" name="q18" value="C"> C) Cognitive meaning.<br>
-                 <input type="radio" name="q18" value="D"> D) Figurative meaning.
-            </div>
-            <div class="form-group">
-                 <label>19. Terminology that primarily expresses or evokes feelings is said to have:</label>
-                 <input type="radio" name="q19" value="A" required> A) Cognitive meaning.<br>
-                 <input type="radio" name="q19" value="B"> B) Literal meaning.<br>
-                 <input type="radio" name="q19" value="C"> C) Denotative meaning.<br>
-                 <input type="radio" name="q19" value="D"> D) Emotive meaning.
-            </div>
-            <div class="form-group">
-                 <label>20. A "value claim" within an emotive statement is part of its:</label>
-                 <input type="radio" name="q20" value="A" required> A) Emotive meaning only.<br>
-                 <input type="radio" name="q20" value="B"> B) Cognitive meaning.<br>
-                 <input type="radio" name="q20" value="C"> C) Grammatical structure.<br>
-                 <input type="radio" name="q20" value="D"> D) Phonetic properties.
-            </div>
-            <div class="form-group">
-                 <label>21. Why is it important in logic to disengage value claims from emotive meaning?</label>
-                 <input type="radio" name="q21" value="A" required> A) Value claims are always false.<br>
-                 <input type="radio" name="q21" value="B"> B) Emotive meaning makes arguments invalid.<br>
-                 <input type="radio" name="q21" value="C"> C) Logic focuses on cognitive meaning, and value claims require rational assessment separate from emotional appeals.<br>
-                 <input type="radio" name="q21" value="D"> D) Emotive meaning is too complex to analyze.
-            </div>
-            <div class="form-group">
-                 <label>22. Using emotive terminology in arguments can be problematic because it often:</label>
-                 <input type="radio" name="q22" value="A" required> A) Makes the argument clearer and more precise.<br>
-                 <input type="radio" name="q22" value="B"> B) Allows arguers to make value claims without providing evidence, potentially hindering logical assessment.<br>
-                 <input type="radio" name="q22" value="C"> C) Guarantees the validity of the argument.<br>
-                 <input type="radio" name="q22" value="D"> D) Eliminates all possibility of counter-argument.
-            </div>
-            <div class="form-group">
-                 <label>23. A linguistic expression is considered "vague" when:</label>
-                 <input type="radio" name="q23" value="A" required> A) It has multiple distinct meanings.<br>
-                 <input type="radio" name="q23" value="B"> B) It is highly technical.<br>
-                 <input type="radio" name="q23" value="C"> C) There are borderline cases where it's impossible to tell if it applies.<br>
-                 <input type="radio" name="q23" value="D"> D) It expresses an emotional state.
-            </div>
-            <div class="form-group">
-                 <label>24. A linguistic expression is considered "ambiguous" when:</label>
-                 <input type="radio" name="q24" value="A" required> A) Its meaning is hazy or imprecise.<br>
-                 <input type="radio" name="q24" value="B"> B) It can be interpreted as having more than one clearly distinct meaning in context.<br>
-                 <input type="radio" name="q24" value="C"> C) It is used in a figurative way.<br>
-                 <input type="radio" name="q24" value="D"> D) It refers to something non-existent.
-            </div>
-            <div class="form-group">
-                 <label>25. A dispute arising from differing interpretations of language is called a:</label>
-                 <input type="radio" name="q25" value="A" required> A) Factual dispute.<br>
-                 <input type="radio" name="q25" value="B"> B) Logical dispute.<br>
-                 <input type="radio" name="q25" value="C"> C) Verbal dispute.<br>
-                 <input type="radio" name="q25" value="D"> D) Cognitive dispute.
-            </div>
-            <div class="form-group">
-                 <label>26. A dispute arising from disagreement about facts in the world is called a:</label>
-                 <input type="radio" name="q26" value="A" required> A) Verbal dispute.<br>
-                 <input type="radio" name="q26" value="B"> B) Factual dispute.<br>
-                 <input type="radio" name="q26" value="C"> C) Semantic dispute.<br>
-                 <input type="radio" name="q26" value="D"> D) Linguistic dispute.
-            </div>
-            <div class="form-group">
-                 <label>27. A "term" in logic is defined as:</label>
-                 <input type="radio" name="q27" value="A" required> A) Any single word in a language.<br>
-                 <input type="radio" name="q27" value="B"> B) Only verbs and adjectives.<br>
-                 <input type="radio" name="q27" value="C"> C) Any word or arrangement of words that may serve as the subject of a statement.<br>
-                 <input type="radio" name="q27" value="D"> D) Sentences that express commands.
-            </div>
-            <div class="form-group">
-                 <label>28. Which of the following is NOT a term?</label>
-                 <input type="radio" name="q28" value="A" required> A) Abebe<br>
-                 <input type="radio" name="q28" value="B"> B) Runs quickly<br>
-                 <input type="radio" name="q28" value="C"> C) Animal<br>
-                 <input type="radio" name="q28" value="D"> D) Those who study hard
-            </div>
-            <div class="form-group">
-                 <label>29. The "intensional meaning" (or intension/connotation) of a term consists of:</label>
-                 <input type="radio" name="q29" value="A" required> A) The members of the class the term denotes.<br>
-                 <input type="radio" name="q29" value="B"> B) The qualities or attributes the term connotes.<br>
-                 <input type="radio" name="q29" value="C"> C) The historical origin of the term.<br>
-                 <input type="radio" name="q29" value="D"> D) The emotional feeling evoked by the term.
-            </div>
-            <div class="form-group">
-                 <label>30. The "extensional meaning" (or extension/denotation) of a term consists of:</label>
-                 <input type="radio" name="q30" value="A" required> A) The qualities or attributes the term connotes.<br>
-                 <input type="radio" name="q30" value="B"> B) The dictionary definition of the term.<br>
-                 <input type="radio" name="q30" value="C"> C) The members of the class the term denotes.<br>
-                 <input type="radio" name="q30" value="D"> D) The synonyms of the term.
-            </div>
-            <div class="form-group">
-                 <label>31. The "conventional connotation" restricts intensional meaning to:</label>
-                 <input type="radio" name="q31" value="A" required> A) The subjective feelings of the speaker.<br>
-                 <input type="radio" name="q31" value="B"> B) The attributes commonly called forth in the minds of competent speakers.<br>
-                 <input type="radio" name="q31" value="C"> C) The literal dictionary definition only.<br>
-                 <input type="radio" name="q31" value="D"> D) The examples the term applies to.
-            </div>
-            <div class="form-group">
-                 <label>32. What is the relationship between intension and extension?</label>
-                 <input type="radio" name="q32" value="A" required> A) Extension determines intension.<br>
-                 <input type="radio" name="q32" value="B"> B) Intension determines extension.<br>
-                 <input type="radio" name="q32" value="C"> C) They are completely independent.<br>
-                 <input type="radio" name="q32" value="D"> D) They are identical concepts.
-            </div>
-            <div class="form-group">
-                 <label>33. Terms like "unicorn" or "current king of France" have:</label>
-                 <input type="radio" name="q33" value="A" required> A) Empty intension but non-empty extension.<br>
-                 <input type="radio" name="q33" value="B"> B) Empty extension but non-empty intension.<br>
-                 <input type="radio" name="q33" value="C"> C) Both empty intension and empty extension.<br>
-                 <input type="radio" name="q33" value="D"> D) Both non-empty intension and non-empty extension.
-            </div>
-            <div class="form-group">
-                 <label>34. When terms are arranged in order of "increasing intension" (e.g., animal, mammal, feline, tiger):</label>
-                 <input type="radio" name="q34" value="A" required> A) The class size generally increases.<br>
-                 <input type="radio" name="q34" value="B"> B) Each term connotes fewer attributes than the one preceding it.<br>
-                 <input type="radio" name="q34" value="C"> C) Each term (except the first) connotes more attributes than the one preceding it.<br>
-                 <input type="radio" name="q34" value="D"> D) The extension must remain the same.
-            </div>
-            <div class="form-group">
-                 <label>35. When terms are arranged in order of "increasing extension" (e.g., tiger, feline, mammal, animal):</label>
-                 <input type="radio" name="q35" value="A" required> A) The class size generally decreases.<br>
-                 <input type="radio" name="q35" value="B"> B) Each term (except the first) denotes a larger class than the one preceding it.<br>
-                 <input type="radio" name="q35" value="C"> C) The intension generally increases.<br>
-                 <input type="radio" name="q35" value="D"> D) Each term denotes the same class size.
-            </div>
-            <div class="form-group">
-                 <label>36. In the definition "Tiger means a large, striped, ferocious feline...", "Tiger" is the ________ and "a large, striped, ferocious feline" is the ________.</label>
-                 <input type="radio" name="q36" value="A" required> A) Definiens; Definiendum<br>
-                 <input type="radio" name="q36" value="B"> B) Definiendum; Definiens<br>
-                 <input type="radio" name="q36" value="C"> C) Extension; Intension<br>
-                 <input type="radio" name="q36" value="D"> D) Intension; Extension
-            </div>
-            <div class="form-group">
-                 <label>37. A "stipulative definition" is one that:</label>
-                 <input type="radio" name="q37" value="A" required> A) Reports the way a word is already used in a language.<br>
-                 <input type="radio" name="q37" value="B"> B) Assigns a meaning to a word for the first time (coining or new meaning).<br>
-                 <input type="radio" name="q37" value="C"> C) Aims to reduce the vagueness of a word.<br>
-                 <input type="radio" name="q37" value="D"> D) Is used to persuade or influence attitudes.
-            </div>
-            <div class="form-group">
-                 <label>38. A "lexical definition" is one that:</label>
-                 <input type="radio" name="q38" value="A" required> A) Assigns a new meaning to a word.<br>
-                 <input type="radio" name="q38" value="B"> B) Is used primarily in theoretical sciences.<br>
-                 <input type="radio" name="q38" value="C"> C) Reports the meaning(s) a word already has in a language (like a dictionary definition).<br>
-                 <input type="radio" name="q38" value="D"> D) Expresses an emotional attitude.
-            </div>
-            <div class="form-group">
-                 <label>39. A "précising definition" is primarily used to:</label>
-                 <input type="radio" name="q39" value="A" required> A) Introduce a brand new term.<br>
-                 <input type="radio" name="q39" value="B"> B) Reduce the vagueness of a word for a specific context.<br>
-                 <input type="radio" name="q39" value="C"> C) Report all existing dictionary meanings.<br>
-                 <input type="radio" name="q39" value="D"> D) Express the etymology of a word.
-            </div>
-            <div class="form-group">
-                 <label>40. A "theoretical definition" aims to:</label>
-                 <input type="radio" name="q40" value="A" required> A) Assign meaning based on common usage.<br>
-                 <input type="radio" name="q40" value="B"> B) Provide a scientifically or philosophically adequate characterization of the entities denoted.<br>
-                 <input type="radio" name="q40" value="C"> C) Define a word using synonyms.<br>
-                 <input type="radio" name="q40" value="D"> D) List examples of what the word denotes.
-            </div>
-            <div class="form-group">
-                 <label>41. A "persuasive definition" is designed to:</label>
-                 <input type="radio" name="q41" value="A" required> A) Be completely neutral and objective.<br>
-                 <input type="radio" name="q41" value="B"> B) Report standard usage accurately.<br>
-                 <input type="radio" name="q41" value="C"> C) Engender a favorable or unfavorable attitude towards what is denoted.<br>
-                 <input type="radio" name="q41" value="D"> D) Clarify ambiguity.
-            </div>
-            <div class="form-group">
-                 <label>42. Pointing to chairs while saying "Chair means this and this..." is an example of which extensional definitional technique?</label>
-                 <input type="radio" name="q42" value="A" required> A) Enumerative definition.<br>
-                 <input type="radio" name="q42" value="B"> B) Definition by subclass.<br>
-                 <input type="radio" name="q42" value="C"> C) Demonstrative (Ostensive) definition.<br>
-                 <input type="radio" name="q42" value="D"> D) Synonymous definition.
-            </div>
-            <div class="form-group">
-                 <label>43. Defining "Actor" by listing 'Abebe Balicha, Samsom Taddesse, Mahder Assefa' is an example of which extensional technique?</label>
-                 <input type="radio" name="q43" value="A" required> A) Demonstrative (Ostensive) definition.<br>
-                 <input type="radio" name="q43" value="B"> B) Definition by subclass.<br>
-                 <input type="radio" name="q43" value="C"> C) Enumerative definition.<br>
-                 <input type="radio" name="q43" value="D"> D) Operational definition.
-            </div>
-            <div class="form-group">
-                 <label>44. Defining "Fictional work" as "a poem, a play, a novel, or a short story" is an example of which extensional technique?</label>
-                 <input type="radio" name="q44" value="A" required> A) Enumerative definition.<br>
-                 <input type="radio" name="q44" value="B"> B) Definition by subclass.<br>
-                 <input type="radio" name="q44" value="C"> C) Demonstrative (Ostensive) definition.<br>
-                 <input type="radio" name="q44" value="D"> D) Etymological definition.
-            </div>
-            <div class="form-group">
-                 <label>45. Defining "Observe" as "means see" is an example of which intensional technique?</label>
-                 <input type="radio" name="q45" value="A" required> A) Etymological definition.<br>
-                 <input type="radio" name="q45" value="B"> B) Operational definition.<br>
-                 <input type="radio" name="q45" value="C"> C) Definition by genus and difference.<br>
-                 <input type="radio" name="q45" value="D"> D) Synonymous definition.
-            </div>
-            <div class="form-group">
-                 <label>46. Defining "license" by tracing its origin to the Latin verb 'licere' (to be permitted) is an example of which intensional technique?</label>
-                 <input type="radio" name="q46" value="A" required> A) Synonymous definition.<br>
-                 <input type="radio" name="q46" value="B"> B) Operational definition.<br>
-                 <input type="radio" name="q46" value="C"> C) Etymological definition.<br>
-                 <input type="radio" name="q46" value="D"> D) Definition by genus and difference.
-            </div>
-            <div class="form-group">
-                 <label>47. Defining an acid partly by stating "if and only if litmus paper turns red when dipped into it" employs which intensional technique?</label>
-                 <input type="radio" name="q47" value="A" required> A) Synonymous definition.<br>
-                 <input type="radio" name="q47" value="B"> B) Operational definition.<br>
-                 <input type="radio" name="q47" value="C"> C) Etymological definition.<br>
-                 <input type="radio" name="q47" value="D"> D) Definition by genus and difference.
-            </div>
-            <div class="form-group">
-                 <label>48. Defining "ice" as "water (genus) that is frozen (difference)" uses which intensional technique?</label>
-                 <input type="radio" name="q48" value="A" required> A) Synonymous definition.<br>
-                 <input type="radio" name="q48" value="B"> B) Operational definition.<br>
-                 <input type="radio" name="q48" value="C"> C) Etymological definition.<br>
-                 <input type="radio" name="q48" value="D"> D) Definition by genus and difference.
-            </div>
-            <div class="form-group">
-                 <label>49. Rule 3 for lexical definitions states that a definition should be neither too broad nor too narrow. A definition is "too broad" if:</label>
-                 <input type="radio" name="q49" value="A" required> A) The definiens excludes things the definiendum includes.<br>
-                 <input type="radio" name="q49" value="B"> B) The definiens includes things the definiendum excludes.<br>
-                 <input type="radio" name="q49" value="C"> C) The definition uses figurative language.<br>
-                 <input type="radio" name="q49" value="D"> D) The definition is circular.
-            </div>
-            <div class="form-group">
-                 <label>50. Rule 6 for lexical definitions advises against definitions that are:</label>
-                 <input type="radio" name="q50" value="A" required> A) Too precise.<br>
-                 <input type="radio" name="q50" value="B"> B) Negative when they can be affirmative.<br>
-                 <input type="radio" name="q50" value="C"> C) Based on essential attributes.<br>
-                 <input type="radio" name="q50" value="D"> D) Figurative, obscure, vague, or ambiguous.
-            </div>
+                 <label>1. A primary function of morality, as described in the chapter introduction, is to:</label>
+                 <input type="radio" name="q1" value="A" required> A) Eliminate all personal desires.<br>
+                 <input type="radio" name="q1" value="B"> B) Provide guidance in making decisions and resolving conflicts.<br>
+                 <input type="radio" name="q1" value="C"> C) Ensure everyone achieves maximum wealth.<br>
+                 <input type="radio" name="q1" value="D"> D) Document historical events accurately.
+             </div>
+             <div class="form-group">
+                 <label>2. An 'instrumental good' is valued because:</label>
+                 <input type="radio" name="q2" value="A" required> A) Of its inherent nature and worth in itself.<br>
+                 <input type="radio" name="q2" value="B"> B) It serves as a means to attain other desired goods.<br>
+                 <input type="radio" name="q2" value="C"> C) It is universally desired by all people.<br>
+                 <input type="radio" name="q2" value="D"> D) It aligns with religious doctrine.
+             </div>
+             <div class="form-group">
+                 <label>3. An 'intrinsic good' is valued:</label>
+                 <input type="radio" name="q3" value="A" required> A) Only for the results it produces.<br>
+                 <input type="radio" name="q3" value="B"> B) Because it is mandated by law.<br>
+                 <input type="radio" name="q3" value="C"> C) For what it is in itself, regardless of consequences.<br>
+                 <input type="radio" name="q3" value="D"> D) Based on its monetary worth.
+             </div>
+             <div class="form-group">
+                 <label>4. Analyzing and critically considering values like sanctity of life, quality of life, and autonomy is identified as a key task of:</label>
+                 <input type="radio" name="q4" value="A" required> A) Legal reasoning<br>
+                 <input type="radio" name="q4" value="B"> B) Scientific inquiry<br>
+                 <input type="radio" name="q4" value="C"> C) Economic forecasting<br>
+                 <input type="radio" name="q4" value="D"> D) Ethical reasoning
+             </div>
+             <div class="form-group">
+                 <label>5. Evaluating the adequacy of reasons given for actions, such as the evidence and logic behind them, is described as a central task of:</label>
+                 <input type="radio" name="q5" value="A" required> A) Political campaigning<br>
+                 <input type="radio" name="q5" value="B"> B) Historical analysis<br>
+                 <input type="radio" name="q5" value="C"> C) Ethics<br>
+                 <input type="radio" name="q5" value="D"> D) Psychological assessment
+             </div>
+             <div class="form-group">
+                 <label>6. The chapter suggests that resolving complex ethical problems definitively is:</label>
+                 <input type="radio" name="q6" value="A" required> A) Always easy with the right formula.<br>
+                 <input type="radio" name="q6" value="B"> B) Not always possible, as ethics involves navigating complexity.<br>
+                 <input type="radio" name="q6" value="C"> C) The sole responsibility of legal professionals.<br>
+                 <input type="radio" name="q6" value="D"> D) Only achievable through religious faith.
+             </div>
+             <div class="form-group">
+                 <label>7. Philosophical ethics encourages individuals to critically reflect on moral sentiments and attitudes, moving beyond:</label>
+                 <input type="radio" name="q7" value="A" required> A) Rational arguments.<br>
+                 <input type="radio" name="q7" value="B"> B) Influences from family and society.<br>
+                 <input type="radio" name="q7" value="C"> C) The consideration of consequences.<br>
+                 <input type="radio" name="q7" value="D"> D) The study of different cultures.
+             </div>
+             <div class="form-group">
+                 <label>8. 'Rationalisation' in an ethical context refers to:</label>
+                 <input type="radio" name="q8" value="A" required> A) The process of applying strict logical rules to derive moral truths.<br>
+                 <input type="radio" name="q8" value="B"> B) Using seemingly rational motives to disguise one's true, underlying reasons.<br>
+                 <input type="radio" name="q8" value="C"> C) Justifying actions based on emotional responses alone.<br>
+                 <input type="radio" name="q8" value="D"> D) A method for testing the factual accuracy of moral claims.
+             </div>
+             <div class="form-group">
+                 <label>9. Reasoning that explains one thing by comparing it to another similar, yet different, thing is called:</label>
+                 <input type="radio" name="q9" value="A" required> A) Deductive reasoning<br>
+                 <input type="radio" name="q9" value="B"> B) Inductive reasoning<br>
+                 <input type="radio" name="q9" value="C"> C) Reasoning by analogy<br>
+                 <input type="radio" name="q9" value="D"> D) Rationalisation
+             </div>
+             <div class="form-group">
+                 <label>10. Applying a general principle to a specific situation (e.g., "All people have rights; you are a person; therefore, you have rights") is an example of:</label>
+                 <input type="radio" name="q10" value="A" required> A) Inductive reasoning<br>
+                 <input type="radio" name="q10" value="B"> B) Reasoning by analogy<br>
+                 <input type="radio" name="q10" value="C"> C) Rationalisation<br>
+                 <input type="radio" name="q10" value="D"> D) Deductive reasoning
+             </div>
+             <div class="form-group">
+                 <label>11. Drawing a conclusion or supporting a hypothesis based on accumulated evidence is characteristic of:</label>
+                 <input type="radio" name="q11" value="A" required> A) Deductive reasoning<br>
+                 <input type="radio" name="q11" value="B"> B) Inductive reasoning<br>
+                 <input type="radio" name="q11" value="C"> C) Reasoning by analogy<br>
+                 <input type="radio" name="q11" value="D"> D) The common good approach
+             </div>
+             <div class="form-group">
+                 <label>12. The relationship between ethics and religious faith is presented as:</label>
+                 <input type="radio" name="q12" value="A" required> A) Completely separate, with no overlap or relevance.<br>
+                 <input type="radio" name="q12" value="B"> B) Identical, where ethics is simply religious commandments.<br>
+                 <input type="radio" name="q12" value="C"> C) Complex, where faith-based arguments are relevant but rational justification is also emphasized.<br>
+                 <input type="radio" name="q12" value="D"> D) Antagonistic, where rational ethics always disproves religious faith.
+             </div>
+             <div class="form-group">
+                 <label>13. The first step suggested in analyzing moral issues within the ethical decision-making framework is:</label>
+                 <input type="radio" name="q13" value="A" required> A) Appealing to values.<br>
+                 <input type="radio" name="q13" value="B"> B) Getting the facts.<br>
+                 <input type="radio" name="q13" value="C"> C) Consulting a religious leader.<br>
+                 <input type="radio" name="q13" value="D"> D) Determining the desired outcome.
+             </div>
+             <div class="form-group">
+                 <label>14. The Fairness and Justice Approach, rooted in Aristotle's philosophy, primarily asks:</label>
+                 <input type="radio" name="q14" value="A" required> A) Does the action produce the greatest good for the greatest number?<br>
+                 <input type="radio" name="q14" value="B"> B) Does the action respect the moral rights of everyone involved?<br>
+                 <input type="radio" name="q14" value="C"> C) Does the action treat everyone equally, or does it show undue favoritism or discrimination?<br>
+                 <input type="radio" name="q14" value="D"> D) Does the action advance the common good?
+             </div>
+             <div class="form-group">
+                 <label>15. Treating equals equally and unequals unequally is a core principle of the:</label>
+                 <input type="radio" name="q15" value="A" required> A) Utilitarian Approach<br>
+                 <input type="radio" name="q15" value="B"> B) Rights Approach<br>
+                 <input type="radio" name="q15" value="C"> C) Common Good Approach<br>
+                 <input type="radio" name="q15" value="D"> D) Fairness and Justice Approach
+             </div>
+             <div class="form-group">
+                 <label>16. The Common Good Approach emphasizes:</label>
+                 <input type="radio" name="q16" value="A" required> A) Individual achievement above all else.<br>
+                 <input type="radio" name="q16" value="B"> B) The well-being of the community and shared societal conditions.<br>
+                 <input type="radio" name="q16" value="C"> C) Adherence to absolute, exceptionless moral rules.<br>
+                 <input type="radio" name="q16" value="D"> D) Maximizing personal liberty regardless of impact on others.
+             </div>
+             <div class="form-group">
+                 <label>17. Focusing on social policies, systems, and environments that benefit all members of a community is central to the:</label>
+                 <input type="radio" name="q17" value="A" required> A) Rights Approach<br>
+                 <input type="radio" name="q17" value="B"> B) Virtue Approach<br>
+                 <input type="radio" name="q17" value="C"> C) Common Good Approach<br>
+                 <input type="radio" name="q17" value="D"> D) Fairness and Justice Approach
+             </div>
+             <div class="form-group">
+                 <label>18. The Rights Approach, influenced by thinkers like Kant, focuses on:</label>
+                 <input type="radio" name="q18" value="A" required> A) The overall consequences of an action for society.<br>
+                 <input type="radio" name="q18" value="B"> B) Respecting the fundamental dignity and entitlements of individuals based on their capacity to choose freely.<br>
+                 <input type="radio" name="q18" value="C"> C) Developing good character traits.<br>
+                 <input type="radio" name="q18" value="D"> D) Ensuring fair distribution of resources.
+             </div>
+             <div class="form-group">
+                 <label>19. An action is considered wrong under the Rights Approach primarily if it:</label>
+                 <input type="radio" name="q19" value="A" required> A) Fails to produce maximum happiness.<br>
+                 <input type="radio" name="q19" value="B"> B) Violates the fundamental moral rights of individuals.<br>
+                 <input type="radio" name="q19" value="C"> C) Goes against traditional customs.<br>
+                 <input type="radio" name="q19" value="D"> D) Does not benefit the community as a whole.
+             </div>
+             <div class="form-group">
+                 <label>20. Which aspect of morality refers to a human being's relationship with a supernatural being or beings?</label>
+                 <input type="radio" name="q20" value="A" required> A) Social morality<br>
+                 <input type="radio" name="q20" value="B"> B) Individual morality<br>
+                 <input type="radio" name="q20" value="C"> C) Morality and nature<br>
+                 <input type="radio" name="q20" value="D"> D) Religious morality
+             </div>
+             <div class="form-group">
+                 <label>21. Morality concerning a human being's relationship to the non-human world falls under:</label>
+                 <input type="radio" name="q21" value="A" required> A) Religious morality<br>
+                 <input type="radio" name="q21" value="B"> B) Morality and nature<br>
+                 <input type="radio" name="q21" value="C"> C) Individual morality<br>
+                 <input type="radio" name="q21" value="D"> D) Social morality
+             </div>
+             <div class="form-group">
+                 <label>22. Individual morality, as described, relates primarily to:</label>
+                 <input type="radio" name="q22" value="A" required> A) Interactions between different people.<br>
+                 <input type="radio" name="q22" value="B"> B) An individual's relationship and duties to themselves, based on personal conscience.<br>
+                 <input type="radio" name="q22" value="C"> C) The laws established by a society.<br>
+                 <input type="radio" name="q22" value="D"> D) Obligations towards a divine being.
+             </div>
+             <div class="form-group">
+                 <label>23. The aspect of morality concerning relationships between human beings is:</label>
+                 <input type="radio" name="q23" value="A" required> A) Religious morality<br>
+                 <input type="radio" name="q23" value="B"> B) Morality and nature<br>
+                 <input type="radio" name="q23" value="C"> C) Individual morality<br>
+                 <input type="radio" name="q23" value="D"> D) Social morality
+             </div>
+             <div class="form-group">
+                 <label>24. The text argues that moral responsibility, in the current understanding, primarily applies to:</label>
+                 <input type="radio" name="q24" value="A" required> A) All living creatures, including plants and animals.<br>
+                 <input type="radio" name="q24" value="B"> B) Only supernatural beings.<br>
+                 <input type="radio" name="q24" value="C"> C) Human beings, due to their capacity for reasoned choice.<br>
+                 <input type="radio" name="q24" value="D"> D) Only those who hold positions of power.
+             </div>
+             <div class="form-group">
+                 <label>25. In evaluating the morality of an action, the term 'motive' refers to:</label>
+                 <input type="radio" name="q25" value="A" required> A) The consequences or results of the action.<br>
+                 <input type="radio" name="q25" value="B"> B) The agency or instrument used to perform the action.<br>
+                 <input type="radio" name="q25" value="C"> C) The intention or the reason why the action was done.<br>
+                 <input type="radio" name="q25" value="D"> D) The specific circumstances surrounding the action.
+             </div>
+             <div class="form-group">
+                 <label>26. The 'means' in a moral judgment refers to:</label>
+                 <input type="radio" name="q26" value="A" required> A) The ultimate goal or purpose of the action.<br>
+                 <input type="radio" name="q26" value="B"> B) The effects or results of the action.<br>
+                 <input type="radio" name="q26" value="C"> C) The agency, method, or instrument used to achieve an end.<br>
+                 <input type="radio" name="q26" value="D"> D) The character of the person performing the action.
+             </div>
+             <div class="form-group">
+                 <label>27. An action is considered 'moral' (i.e., within the scope of morality, whether good or bad), rather than 'non-moral', if it typically involves:</label>
+                 <input type="radio" name="q27" value="A" required> A) An agent, intention, and affects others.<br>
+                 <input type="radio" name="q27" value="B"> B) Only natural events.<br>
+                 <input type="radio" name="q27" value="C"> C) Actions performed by animals.<br>
+                 <input type="radio" name="q27" value="D"> D) Reflexive or involuntary actions.
+             </div>
+             <div class="form-group">
+                 <label>28. The argument from 'enlightened self-interest' for being moral suggests that:</label>
+                 <input type="radio" name="q28" value="A" required> A) Morality is solely about self-sacrifice.<br>
+                 <input type="radio" name="q28" value="B"> B) Acting morally generally benefits oneself, especially within a cooperative society.<br>
+                 <input type="radio" name="q28" value="C"> C) Self-interest is inherently immoral.<br>
+                 <input type="radio" name="q28" value="D"> D) Only laws, not self-interest, can motivate moral behavior.
+             </div>
+             <div class="form-group">
+                 <label>29. The argument that common human needs (like friendship, peace, stability) provide a reason to be moral is based on the idea that:</label>
+                 <input type="radio" name="q29" value="A" required> A) Morality hinders the fulfillment of these needs.<br>
+                 <input type="radio" name="q29" value="B"> B) These needs are best met in a society that follows cooperative moral principles.<br>
+                 <input type="radio" name="q29" value="C"> C) Human needs are purely selfish.<br>
+                 <input type="radio" name="q29" value="D"> D) Only religion can address human needs.
+             </div>
+             <div class="form-group">
+                 <label>30. According to the chapter summary, ethical theories and principles serve as:</label>
+                 <input type="radio" name="q30" value="A" required> A) Definitive algorithms that provide easy answers to all moral questions.<br>
+                 <input type="radio" name="q30" value="B"> B) Historical curiosities with no practical relevance.<br>
+                 <input type="radio" name="q30" value="C"> C) Foundations and viewpoints for ethical analysis and decision-making.<br>
+                 <input type="radio" name="q30" value="D"> D) Replacements for factual investigation.
+             </div>
+
 
             <button type="button" onclick="showReview()">Submit</button>
         </form>
@@ -461,9 +322,9 @@
         let quizData = null;
         let formData = null;
         const { jsPDF } = window.jspdf;
-        const TOTAL_QUESTIONS = 50; // Total number of questions
+        const TOTAL_QUESTIONS = 30; // **** UPDATED Total number of questions ****
 
-        // Valid login credentials
+        // Valid login credentials (Remains the same)
         const validCredentials = [
             { username: 'section19', password: '123' },
             { username: 'section20', password: '123' },
@@ -472,73 +333,51 @@
             // Add more valid credentials as needed
         ];
 
-        // Structure holding question texts and choices (NEW SET: LOGIC Ch3)
+        // **** NEW SET: Chapter 3 Questions ****
         const allQuestionsData = {
-             q1: { text: 'Why is close attention to language crucial for interpreting, analyzing, and evaluating arguments?', choices: { A: 'Language is primarily used for expressing emotions.', B: 'Correct reasoning can only be conveyed through clear and understandable language.', C: 'All logical errors stem from historical misunderstandings.', D: 'Philosophy aims to create new languages.' } },
-             q2: { text: 'Philosophy of Language is primarily concerned with:', choices: { A: 'The grammatical rules of specific languages like English or French.', B: 'The origins of language, the nature of meaning, and the language-reality relationship.', C: 'Translating ancient philosophical texts accurately.', D: 'The historical development of word pronunciations.' } },
-             q3: { text: 'Semiotics studies:', choices: { A: 'The evolution of sentence structure over time.', B: 'The relationship between philosophy and linguistics.', C: 'Sign processes in communication and how meaning is constructed.', D: 'The cognitive processes involved in language acquisition.' } },
-             q4: { text: 'How does Philosophy of Language differ from Linguistics?', choices: { A: 'Linguistics focuses on meaning, while Philosophy of Language focuses on grammar.', B: 'Philosophy of Language asks broader questions about meaning and reality, while Linguistics studies the structure and rules of specific languages.', C: 'There is no significant difference; the terms are interchangeable.', D: 'Philosophy of Language is a subfield of Linguistics.' } },
-             q5: { text: 'Noam Chomsky\'s concept of "universal grammar" suggests that humans:', choices: { A: 'Learn all grammatical rules purely from experience.', B: 'Are born with an innate set of linguistic principles.', C: 'Use language primarily for symbolic manipulation.', D: 'Can only understand one language fluently.' } },
-             q6: { text: 'Semantic Holism is the view that meaning is primarily attributed to:', choices: { A: 'Individual words.', B: 'Individual sentences.', C: 'A whole language system.', D: 'Specific speech acts.' } },
-             q7: { text: 'Which ancient philosopher held that the meaning of a predicate is established through abstracting similarities between individual things (later known as Nominalism)?', choices: { A: 'Plato', B: 'Socrates', C: 'Zeno', D: 'Aristotle' } },
-             q8: { text: 'The Stoic philosophers contributed the concept of lektón, which relates to:', choices: { A: 'The grammatical parts of speech.', B: 'The meaning or sense of a term, leading to the idea of a proposition.', C: 'The rules of syntax.', D: 'The historical origin of words.' } },
-             q9: { text: 'Which philosophical movement significantly emphasized the philosophy of language in the late 19th and 20th centuries?', choices: { A: 'Existentialism', B: 'Stoicism', C: 'Scholasticism', D: 'Analytic Philosophy' } },
-             q10: { text: 'Conceptual meaning refers primarily to:', choices: { A: 'The emotional associations of a word.', B: 'The dictionary definition or semantic features of a word.', C: 'The way a word is used in a specific speech act.', D: 'The things in the world a word refers to.' } },
-             q11: { text: 'Associative meaning refers to:', choices: { A: 'The literal definition of a word.', B: 'The grammatical function of a word.', C: 'The individual mental understandings and connotations (social, affective, etc.) of a word.', D: 'The truth conditions of a sentence.' } },
-             q12: { text: 'Idea theories of meaning claim that meanings are:', choices: { A: 'Conditions under which a statement is true.', B: 'Purely mental contents provoked by signs.', C: 'Determined by the consequences of application.', D: 'The actual things in the world referred to by signs.' } },
-             q13: { text: 'Truth-conditional theories hold that the meaning of an expression is primarily:', choices: { A: 'Its relationship to other words in the language.', B: 'The mental image it evokes.', C: 'The conditions under which it can be true or false.', D: 'Its conventional usage in speech acts.' } },
-             q14: { text: 'Use theories of meaning emphasize:', choices: { A: 'The dictionary definitions of words.', B: 'The mental states of the speaker.', C: 'The role of speech acts and particular utterances in determining meaning.', D: 'The objects in the world that words refer to.' } },
-             q15: { text: 'Reference theories (semantic externalism) view meaning as:', choices: { A: 'Internal mental concepts.', B: 'The actual things in the world connected to signs.', C: 'The rules governing language use.', D: 'The method of verifying a sentence.' } },
-             q16: { text: 'Verificationist theories associate meaning with:', choices: { A: 'The speaker\'s intention.', B: 'The consequences of a sentence\'s application.', C: 'The method of verifying or falsifying a sentence.', D: 'The historical origin of the words used.' } },
-             q17: { text: 'The two primary linguistic functions relevant for logic are conveying information and:', choices: { A: 'Giving commands.', B: 'Asking questions.', C: 'Expressing or evoking feelings.', D: 'Telling jokes.' } },
-             q18: { text: 'Terminology that primarily conveys information is said to have:', choices: { A: 'Emotive meaning.', B: 'Associative meaning.', C: 'Cognitive meaning.', D: 'Figurative meaning.' } },
-             q19: { text: 'Terminology that primarily expresses or evokes feelings is said to have:', choices: { A: 'Cognitive meaning.', B: 'Literal meaning.', C: 'Denotative meaning.', D: 'Emotive meaning.' } },
-             q20: { text: 'A "value claim" within an emotive statement is part of its:', choices: { A: 'Emotive meaning only.', B: 'Cognitive meaning.', C: 'Grammatical structure.', D: 'Phonetic properties.' } },
-             q21: { text: 'Why is it important in logic to disengage value claims from emotive meaning?', choices: { A: 'Value claims are always false.', B: 'Emotive meaning makes arguments invalid.', C: 'Logic focuses on cognitive meaning, and value claims require rational assessment separate from emotional appeals.', D: 'Emotive meaning is too complex to analyze.' } },
-             q22: { text: 'Using emotive terminology in arguments can be problematic because it often:', choices: { A: 'Makes the argument clearer and more precise.', B: 'Allows arguers to make value claims without providing evidence, potentially hindering logical assessment.', C: 'Guarantees the validity of the argument.', D: 'Eliminates all possibility of counter-argument.' } },
-             q23: { text: 'A linguistic expression is considered "vague" when:', choices: { A: 'It has multiple distinct meanings.', B: 'It is highly technical.', C: 'There are borderline cases where it\'s impossible to tell if it applies.', D: 'It expresses an emotional state.' } },
-             q24: { text: 'A linguistic expression is considered "ambiguous" when:', choices: { A: 'Its meaning is hazy or imprecise.', B: 'It can be interpreted as having more than one clearly distinct meaning in context.', C: 'It is used in a figurative way.', D: 'It refers to something non-existent.' } },
-             q25: { text: 'A dispute arising from differing interpretations of language is called a:', choices: { A: 'Factual dispute.', B: 'Logical dispute.', C: 'Verbal dispute.', D: 'Cognitive dispute.' } },
-             q26: { text: 'A dispute arising from disagreement about facts in the world is called a:', choices: { A: 'Verbal dispute.', B: 'Factual dispute.', C: 'Semantic dispute.', D: 'Linguistic dispute.' } },
-             q27: { text: 'A "term" in logic is defined as:', choices: { A: 'Any single word in a language.', B: 'Only verbs and adjectives.', C: 'Any word or arrangement of words that may serve as the subject of a statement.', D: 'Sentences that express commands.' } },
-             q28: { text: 'Which of the following is NOT a term?', choices: { A: 'Abebe', B: 'Runs quickly', C: 'Animal', D: 'Those who study hard' } },
-             q29: { text: 'The "intensional meaning" (or intension/connotation) of a term consists of:', choices: { A: 'The members of the class the term denotes.', B: 'The qualities or attributes the term connotes.', C: 'The historical origin of the term.', D: 'The emotional feeling evoked by the term.' } },
-             q30: { text: 'The "extensional meaning" (or extension/denotation) of a term consists of:', choices: { A: 'The qualities or attributes the term connotes.', B: 'The dictionary definition of the term.', C: 'The members of the class the term denotes.', D: 'The synonyms of the term.' } },
-             q31: { text: 'The "conventional connotation" restricts intensional meaning to:', choices: { A: 'The subjective feelings of the speaker.', B: 'The attributes commonly called forth in the minds of competent speakers.', C: 'The literal dictionary definition only.', D: 'The examples the term applies to.' } },
-             q32: { text: 'What is the relationship between intension and extension?', choices: { A: 'Extension determines intension.', B: 'Intension determines extension.', C: 'They are completely independent.', D: 'They are identical concepts.' } },
-             q33: { text: 'Terms like "unicorn" or "current king of France" have:', choices: { A: 'Empty intension but non-empty extension.', B: 'Empty extension but non-empty intension.', C: 'Both empty intension and empty extension.', D: 'Both non-empty intension and non-empty extension.' } },
-             q34: { text: 'When terms are arranged in order of "increasing intension" (e.g., animal, mammal, feline, tiger):', choices: { A: 'The class size generally increases.', B: 'Each term connotes fewer attributes than the one preceding it.', C: 'Each term (except the first) connotes more attributes than the one preceding it.', D: 'The extension must remain the same.' } },
-             q35: { text: 'When terms are arranged in order of "increasing extension" (e.g., tiger, feline, mammal, animal):', choices: { A: 'The class size generally decreases.', B: 'Each term (except the first) denotes a larger class than the one preceding it.', C: 'The intension generally increases.', D: 'Each term denotes the same class size.' } },
-             q36: { text: 'In the definition "Tiger means a large, striped, ferocious feline...", "Tiger" is the ________ and "a large, striped, ferocious feline" is the ________.', choices: { A: 'Definiens; Definiendum', B: 'Definiendum; Definiens', C: 'Extension; Intension', D: 'Intension; Extension' } },
-             q37: { text: 'A "stipulative definition" is one that:', choices: { A: 'Reports the way a word is already used in a language.', B: 'Assigns a meaning to a word for the first time (coining or new meaning).', C: 'Aims to reduce the vagueness of a word.', D: 'Is used to persuade or influence attitudes.' } },
-             q38: { text: 'A "lexical definition" is one that:', choices: { A: 'Assigns a new meaning to a word.', B: 'Is used primarily in theoretical sciences.', C: 'Reports the meaning(s) a word already has in a language (like a dictionary definition).', D: 'Expresses an emotional attitude.' } },
-             q39: { text: 'A "précising definition" is primarily used to:', choices: { A: 'Introduce a brand new term.', B: 'Reduce the vagueness of a word for a specific context.', C: 'Report all existing dictionary meanings.', D: 'Express the etymology of a word.' } },
-             q40: { text: 'A "theoretical definition" aims to:', choices: { A: 'Assign meaning based on common usage.', B: 'Provide a scientifically or philosophically adequate characterization of the entities denoted.', C: 'Define a word using synonyms.', D: 'List examples of what the word denotes.' } },
-             q41: { text: 'A "persuasive definition" is designed to:', choices: { A: 'Be completely neutral and objective.', B: 'Report standard usage accurately.', C: 'Engender a favorable or unfavorable attitude towards what is denoted.', D: 'Clarify ambiguity.' } },
-             q42: { text: 'Pointing to chairs while saying "Chair means this and this..." is an example of which extensional definitional technique?', choices: { A: 'Enumerative definition.', B: 'Definition by subclass.', C: 'Demonstrative (Ostensive) definition.', D: 'Synonymous definition.' } },
-             q43: { text: 'Defining "Actor" by listing \'Abebe Balicha, Samsom Taddesse, Mahder Assefa\' is an example of which extensional technique?', choices: { A: 'Demonstrative (Ostensive) definition.', B: 'Definition by subclass.', C: 'Enumerative definition.', D: 'Operational definition.' } },
-             q44: { text: 'Defining "Fictional work" as "a poem, a play, a novel, or a short story" is an example of which extensional technique?', choices: { A: 'Enumerative definition.', B: 'Definition by subclass.', C: 'Demonstrative (Ostensive) definition.', D: 'Etymological definition.' } },
-             q45: { text: 'Defining "Observe" as "means see" is an example of which intensional technique?', choices: { A: 'Etymological definition.', B: 'Operational definition.', C: 'Definition by genus and difference.', D: 'Synonymous definition.' } },
-             q46: { text: 'Defining "license" by tracing its origin to the Latin verb \'licere\' (to be permitted) is an example of which intensional technique?', choices: { A: 'Synonymous definition.', B: 'Operational definition.', C: 'Etymological definition.', D: 'Definition by genus and difference.' } },
-             q47: { text: 'Defining an acid partly by stating "if and only if litmus paper turns red when dipped into it" employs which intensional technique?', choices: { A: 'Synonymous definition.', B: 'Operational definition.', C: 'Etymological definition.', D: 'Definition by genus and difference.' } },
-             q48: { text: 'Defining "ice" as "water (genus) that is frozen (difference)" uses which intensional technique?', choices: { A: 'Synonymous definition.', B: 'Operational definition.', C: 'Etymological definition.', D: 'Definition by genus and difference.' } },
-             q49: { text: 'Rule 3 for lexical definitions states that a definition should be neither too broad nor too narrow. A definition is "too broad" if:', choices: { A: 'The definiens excludes things the definiendum includes.', B: 'The definiens includes things the definiendum excludes.', C: 'The definition uses figurative language.', D: 'The definition is circular.' } },
-             q50: { text: 'Rule 6 for lexical definitions advises against definitions that are:', choices: { A: 'Too precise.', B: 'Negative when they can be affirmative.', C: 'Based on essential attributes.', D: 'Figurative, obscure, vague, or ambiguous.' } }
+             q1: { text: 'A primary function of morality, as described in the chapter introduction, is to:', choices: { A: 'Eliminate all personal desires.', B: 'Provide guidance in making decisions and resolving conflicts.', C: 'Ensure everyone achieves maximum wealth.', D: 'Document historical events accurately.' } },
+             q2: { text: "An 'instrumental good' is valued because:", choices: { A: 'Of its inherent nature and worth in itself.', B: 'It serves as a means to attain other desired goods.', C: 'It is universally desired by all people.', D: 'It aligns with religious doctrine.' } },
+             q3: { text: "An 'intrinsic good' is valued:", choices: { A: 'Only for the results it produces.', B: 'Because it is mandated by law.', C: 'For what it is in itself, regardless of consequences.', D: 'Based on its monetary worth.' } },
+             q4: { text: 'Analyzing and critically considering values like sanctity of life, quality of life, and autonomy is identified as a key task of:', choices: { A: 'Legal reasoning', B: 'Scientific inquiry', C: 'Economic forecasting', D: 'Ethical reasoning' } },
+             q5: { text: 'Evaluating the adequacy of reasons given for actions, such as the evidence and logic behind them, is described as a central task of:', choices: { A: 'Political campaigning', B: 'Historical analysis', C: 'Ethics', D: 'Psychological assessment' } },
+             q6: { text: 'The chapter suggests that resolving complex ethical problems definitively is:', choices: { A: 'Always easy with the right formula.', B: 'Not always possible, as ethics involves navigating complexity.', C: 'The sole responsibility of legal professionals.', D: 'Only achievable through religious faith.' } },
+             q7: { text: 'Philosophical ethics encourages individuals to critically reflect on moral sentiments and attitudes, moving beyond:', choices: { A: 'Rational arguments.', B: 'Influences from family and society.', C: 'The consideration of consequences.', D: 'The study of different cultures.' } },
+             q8: { text: "'Rationalisation' in an ethical context refers to:", choices: { A: 'The process of applying strict logical rules to derive moral truths.', B: "Using seemingly rational motives to disguise one's true, underlying reasons.", C: 'Justifying actions based on emotional responses alone.', D: 'A method for testing the factual accuracy of moral claims.' } },
+             q9: { text: 'Reasoning that explains one thing by comparing it to another similar, yet different, thing is called:', choices: { A: 'Deductive reasoning', B: 'Inductive reasoning', C: 'Reasoning by analogy', D: 'Rationalisation' } },
+             q10: { text: 'Applying a general principle to a specific situation (e.g., "All people have rights; you are a person; therefore, you have rights") is an example of:', choices: { A: 'Inductive reasoning', B: 'Reasoning by analogy', C: 'Rationalisation', D: 'Deductive reasoning' } },
+             q11: { text: 'Drawing a conclusion or supporting a hypothesis based on accumulated evidence is characteristic of:', choices: { A: 'Deductive reasoning', B: 'Inductive reasoning', C: 'Reasoning by analogy', D: 'The common good approach' } },
+             q12: { text: 'The relationship between ethics and religious faith is presented as:', choices: { A: 'Completely separate, with no overlap or relevance.', B: 'Identical, where ethics is simply religious commandments.', C: 'Complex, where faith-based arguments are relevant but rational justification is also emphasized.', D: 'Antagonistic, where rational ethics always disproves religious faith.' } },
+             q13: { text: 'The first step suggested in analyzing moral issues within the ethical decision-making framework is:', choices: { A: 'Appealing to values.', B: 'Getting the facts.', C: 'Consulting a religious leader.', D: 'Determining the desired outcome.' } },
+             q14: { text: "The Fairness and Justice Approach, rooted in Aristotle's philosophy, primarily asks:", choices: { A: 'Does the action produce the greatest good for the greatest number?', B: 'Does the action respect the moral rights of everyone involved?', C: 'Does the action treat everyone equally, or does it show undue favoritism or discrimination?', D: 'Does the action advance the common good?' } },
+             q15: { text: 'Treating equals equally and unequals unequally is a core principle of the:', choices: { A: 'Utilitarian Approach', B: 'Rights Approach', C: 'Common Good Approach', D: 'Fairness and Justice Approach' } },
+             q16: { text: 'The Common Good Approach emphasizes:', choices: { A: 'Individual achievement above all else.', B: 'The well-being of the community and shared societal conditions.', C: 'Adherence to absolute, exceptionless moral rules.', D: 'Maximizing personal liberty regardless of impact on others.' } },
+             q17: { text: 'Focusing on social policies, systems, and environments that benefit all members of a community is central to the:', choices: { A: 'Rights Approach', B: 'Virtue Approach', C: 'Common Good Approach', D: 'Fairness and Justice Approach' } },
+             q18: { text: 'The Rights Approach, influenced by thinkers like Kant, focuses on:', choices: { A: 'The overall consequences of an action for society.', B: 'Respecting the fundamental dignity and entitlements of individuals based on their capacity to choose freely.', C: 'Developing good character traits.', D: 'Ensuring fair distribution of resources.' } },
+             q19: { text: 'An action is considered wrong under the Rights Approach primarily if it:', choices: { A: 'Fails to produce maximum happiness.', B: 'Violates the fundamental moral rights of individuals.', C: 'Goes against traditional customs.', D: 'Does not benefit the community as a whole.' } },
+             q20: { text: "Which aspect of morality refers to a human being's relationship with a supernatural being or beings?", choices: { A: 'Social morality', B: 'Individual morality', C: 'Morality and nature', D: 'Religious morality' } },
+             q21: { text: "Morality concerning a human being's relationship to the non-human world falls under:", choices: { A: 'Religious morality', B: 'Morality and nature', C: 'Individual morality', D: 'Social morality' } },
+             q22: { text: 'Individual morality, as described, relates primarily to:', choices: { A: 'Interactions between different people.', B: "An individual's relationship and duties to themselves, based on personal conscience.", C: 'The laws established by a society.', D: 'Obligations towards a divine being.' } },
+             q23: { text: 'The aspect of morality concerning relationships between human beings is:', choices: { A: 'Religious morality', B: 'Morality and nature', C: 'Individual morality', D: 'Social morality' } },
+             q24: { text: 'The text argues that moral responsibility, in the current understanding, primarily applies to:', choices: { A: 'All living creatures, including plants and animals.', B: 'Only supernatural beings.', C: 'Human beings, due to their capacity for reasoned choice.', D: 'Only those who hold positions of power.' } },
+             q25: { text: "In evaluating the morality of an action, the term 'motive' refers to:", choices: { A: 'The consequences or results of the action.', B: 'The agency or instrument used to perform the action.', C: 'The intention or the reason why the action was done.', D: 'The specific circumstances surrounding the action.' } },
+             q26: { text: "The 'means' in a moral judgment refers to:", choices: { A: 'The ultimate goal or purpose of the action.', B: 'The effects or results of the action.', C: 'The agency, method, or instrument used to achieve an end.', D: 'The character of the person performing the action.' } },
+             q27: { text: "An action is considered 'moral' (i.e., within the scope of morality, whether good or bad), rather than 'non-moral', if it typically involves:", choices: { A: 'An agent, intention, and affects others.', B: 'Only natural events.', C: 'Actions performed by animals.', D: 'Reflexive or involuntary actions.' } },
+             q28: { text: "The argument from 'enlightened self-interest' for being moral suggests that:", choices: { A: 'Morality is solely about self-sacrifice.', B: 'Acting morally generally benefits oneself, especially within a cooperative society.', C: 'Self-interest is inherently immoral.', D: 'Only laws, not self-interest, can motivate moral behavior.' } },
+             q29: { text: 'The argument that common human needs (like friendship, peace, stability) provide a reason to be moral is based on the idea that:', choices: { A: 'Morality hinders the fulfillment of these needs.', B: 'These needs are best met in a society that follows cooperative moral principles.', C: 'Human needs are purely selfish.', D: 'Only religion can address human needs.' } },
+             q30: { text: 'According to the chapter summary, ethical theories and principles serve as:', choices: { A: 'Definitive algorithms that provide easy answers to all moral questions.', B: 'Historical curiosities with no practical relevance.', C: 'Foundations and viewpoints for ethical analysis and decision-making.', D: 'Replacements for factual investigation.' } }
         };
 
-        // Correct answers mapped to letters (NEW SET: LOGIC Ch3)
+        // **** NEW SET: Correct answers mapped to letters (Chapter 3) ****
         const correctAnswersMap = {
-             q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'B',
-             q6: 'C', q7: 'D', q8: 'B', q9: 'D', q10: 'B',
-             q11: 'C', q12: 'B', q13: 'C', q14: 'C', q15: 'B',
-             q16: 'C', q17: 'C', q18: 'C', q19: 'D', q20: 'B',
-             q21: 'C', q22: 'B', q23: 'C', q24: 'B', q25: 'C',
-             q26: 'B', q27: 'C', q28: 'B', q29: 'B', q30: 'C',
-             q31: 'B', q32: 'B', q33: 'B', q34: 'C', q35: 'B',
-             q36: 'B', q37: 'B', q38: 'C', q39: 'B', q40: 'B',
-             q41: 'C', q42: 'C', q43: 'C', q44: 'B', q45: 'D',
-             q46: 'C', q47: 'B', q48: 'D', q49: 'B', q50: 'D'
+             q1: 'B',  q2: 'B',  q3: 'C',  q4: 'D',  q5: 'C',
+             q6: 'B',  q7: 'B',  q8: 'B',  q9: 'C',  q10: 'D',
+             q11: 'B', q12: 'C', q13: 'B', q14: 'C', q15: 'D',
+             q16: 'B', q17: 'C', q18: 'B', q19: 'B', q20: 'D',
+             q21: 'B', q22: 'B', q23: 'D', q24: 'C', q25: 'C',
+             q26: 'C', q27: 'A', q28: 'B', q29: 'B', q30: 'C'
         };
+
+        // --- Functions below are adjusted for TOTAL_QUESTIONS = 30 and new content ---
 
         function checkLogin() {
             const username = document.getElementById('username').value.trim();
@@ -567,7 +406,7 @@
 
              // Check if all questions are answered
              let allAnswered = true;
-             for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  if (!data[`q${i}`]) {
                      allAnswered = false;
                      break;
@@ -587,7 +426,7 @@
                 email: data.email,
                 phone: data.phone,
                 answers: {},
-                questions: allQuestionsData // Use the predefined structure
+                questions: allQuestionsData // Use the updated structure
             };
 
             // Populate answers dynamically
@@ -601,11 +440,11 @@
                 <h3>Your Answers:</h3>
             `;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                 const qKey = `q${i}`;
                 const userAnswer = data[qKey];
                 quizData.answers[qKey] = userAnswer; // Store answer
-                const questionInfo = allQuestionsData[qKey];
+                const questionInfo = allQuestionsData[qKey]; // Use updated data
                 const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                 reviewHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
             }
@@ -636,7 +475,7 @@
 
 
             doc.setFontSize(16);
-            doc.text('Logic and Language Quiz Response', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text('Ethical Decision Making Quiz Response - Chapter 3', pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -646,7 +485,7 @@
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
             doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  const qKey = `q${i}`;
                  const question = quizData.questions[qKey];
                  const userAnswer = quizData.answers[qKey];
@@ -675,7 +514,7 @@
 
             }
 
-            doc.save(`logic_lang_quiz_response_${quizData.id_number}.pdf`); // Updated filename
+            doc.save(`ethical_decision_ch3_quiz_response_${quizData.id_number}.pdf`); // Updated filename
         }
 
         // --- MODIFIED: Sends data to your backend ---
@@ -692,9 +531,9 @@
 
                 // Calculate score
                 let score = 0;
-                for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                     const qKey = `q${i}`;
-                    if (data[qKey] === correctAnswersMap[qKey]) {
+                    if (data[qKey] === correctAnswersMap[qKey]) { // Use updated map
                         score++;
                     }
                 }
@@ -710,8 +549,8 @@
                     email: data.email,
                     phone: data.phone,
                     score: score,
-                    totalQuestions: TOTAL_QUESTIONS,
-                    quizTitle: "Logic and Language Quiz - Chapter 3", // Added title
+                    totalQuestions: TOTAL_QUESTIONS, // Now 30
+                    quizTitle: "Ethical Decision Making Quiz - Chapter 3", // **** UPDATED TITLE ****
                     submittedAt: new Date().toISOString()
                     // Add individual answers if needed by backend
                     // answers: quizData.answers
@@ -747,9 +586,9 @@
                             <hr>
                             <h3>Submitted Answers:</h3>
                         `;
-                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                              const qKey = `q${i}`;
-                             const questionInfo = quizData.questions[qKey];
+                             const questionInfo = quizData.questions[qKey]; // Use updated data
                              const userAnswer = quizData.answers[qKey];
                              const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                              submissionHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
@@ -820,10 +659,10 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey];
-                 const correctText = allQuestionsData[qKey].choices[correctLetter];
+                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
+                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`; // Changed format slightly
              }
 
@@ -833,12 +672,12 @@
             const answersDiv = document.getElementById('answers');
             let answersHTML = '<h3>Detailed Results:</h3>';
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey];
+                 const question = quizData.questions[qKey]; // Use updated data
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey];
+                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
 
                  answersHTML += `
                     <div class="question-result">
@@ -857,7 +696,7 @@
             answersDiv.innerHTML = answersHTML;
 
 
-            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`;
+            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`; // TOTAL_QUESTIONS is now 30
         }
 
         function downloadPDF() {
@@ -872,15 +711,15 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey];
-                 const correctText = allQuestionsData[qKey].choices[correctLetter];
+                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
+                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`;
              }
 
             doc.setFontSize(16);
-            doc.text('Logic and Language Quiz Results', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text('Ethical Decision Making Quiz Results - Chapter 3', pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -891,17 +730,17 @@
             doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
 
             doc.setFont('helvetica', 'bold');
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 30
             y += 10;
             doc.setFont('helvetica', 'normal');
 
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey];
+                 const question = quizData.questions[qKey]; // Use updated data
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey];
+                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
                  const questionText = question.text;
                  const correctAnswerFull = displayCorrectAnswers[qKey];
 
@@ -948,9 +787,9 @@
             if (y > pageHeight - margin) { doc.addPage(); y = margin; }
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(14);
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 30
 
-            doc.save(`logic_lang_quiz_results_${quizData.id_number}.pdf`); // Updated filename
+            doc.save(`ethical_decision_ch3_quiz_results_${quizData.id_number}.pdf`); // Updated filename
         }
     </script>
 </body>
