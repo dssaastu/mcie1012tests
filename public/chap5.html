@@ -4,7 +4,7 @@
     <!-- IMPORTANT: Make sure your text editor saves this file with UTF-8 Encoding! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logical Reasoning and Fallacies Quiz</title> <!-- Changed Title -->
+    <title>Constitution, Democracy & Human Rights Quiz - Chapter 5</title> <!-- Changed Title -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
@@ -44,8 +44,8 @@
     </div>
 
     <div id="quiz-form" class="hidden">
-        <h1>Logical Reasoning and Fallacies Quiz - Chapter 5</h1> <!-- Changed Title -->
-        <form id="mcie-quiz"> <!-- ID Kept, content changed -->
+        <h1>Constitution, Democracy & Human Rights Quiz - Chapter 5</h1> <!-- Changed Title -->
+        <form id="mcie-quiz"> <!-- ID Kept, but content changed -->
             <!-- Student Information -->
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -68,358 +68,357 @@
                 <input type="tel" id="phone" name="phone" required>
             </div>
 
-            <!-- Logical Reasoning and Fallacies Multiple-Choice Questions -->
-            <div class="form-group">
-                <label>1. A fallacy is defined as:</label>
-                <input type="radio" name="q1" value="A" required> A) An argument with only false premises.<br>
-                <input type="radio" name="q1" value="B"> B) A defect in an argument consisting of something other than merely false premises.<br>
-                <input type="radio" name="q1" value="C"> C) Any argument that fails to persuade the audience.<br>
-                <input type="radio" name="q1" value="D"> D) A valid argument with a false conclusion.
-            </div>
-            <div class="form-group">
-                <label>2. Fallacies often involve mistakes in reasoning or:</label>
-                <input type="radio" name="q2" value="A" required> A) The use of overly complex language.<br>
-                <input type="radio" name="q2" value="B"> B) The creation of an illusion that makes a bad argument appear good.<br>
-                <input type="radio" name="q2" value="C"> C) Having too many premises.<br>
-                <input type="radio" name="q2" value="D"> D) A conclusion that is obviously true.
-            </div>
-            <div class="form-group">
-                <label>3. A "formal fallacy" is a defect related to the argument's:</label>
-                <input type="radio" name="q3" value="A" required> A) Content and subject matter.<br>
-                <input type="radio" name="q3" value="B"> B) Emotional appeal.<br>
-                <input type="radio" name="q3" value="C"> C) Structure or form.<br>
-                <input type="radio" name="q3" value="D"> D) Number of premises.
-            </div>
-            <div class="form-group">
-                <label>4. An "informal fallacy" is a defect identified primarily through analyzing the argument's:</label>
-                <input type="radio" name="q4" value="A" required> A) Structure or form.<br>
-                <input type="radio" name="q4" value="B"> B) Content and meaning.<br>
-                <input type="radio" name="q4" value="C"> C) Grammatical correctness.<br>
-                <input type="radio" name="q4" value="D"> D) Length.
-            </div>
-            <div class="form-group">
-                <label>5. Formal fallacies are found only in which type of argument?</label>
-                <input type="radio" name="q5" value="A" required> A) Inductive arguments.<br>
-                <input type="radio" name="q5" value="B"> B) Arguments from analogy.<br>
-                <input type="radio" name="q5" value="C"> C) Deductive arguments with identifiable forms.<br>
-                <input type="radio" name="q5" value="D"> D) Arguments based on statistics.
-            </div>
-            <div class="form-group">
-                <label>6. The fallacy exemplified by the form "If A, then B. B. Therefore, A" is known as:</label>
-                <input type="radio" name="q6" value="A" required> A) Denying the antecedent.<br>
-                <input type="radio" name="q6" value="B"> B) Affirming the consequent.<br>
-                <input type="radio" name="q6" value="C"> C) Modus ponens.<br>
-                <input type="radio" name="q6" value="D"> D) Modus tollens.
-            </div>
-            <div class="form-group">
-                <label>7. Informal fallacies like the "plants" example (All factories are plants...) often arise from issues like:</label>
-                <input type="radio" name="q7" value="A" required> A) Invalid deductive structure.<br>
-                <input type="radio" name="q7" value="B"> B) Ambiguity in the meaning of terms.<br>
-                <input type="radio" name="q7" value="C"> C) Having too few premises.<br>
-                <input type="radio" name="q7" value="D"> D) False premises only.
-            </div>
-            <div class="form-group">
-                <label>8. Fallacies of Relevance share the common characteristic that their premises are:</label>
-                <input type="radio" name="q8" value="A" required> A) Logically relevant but factually false.<br>
-                <input type="radio" name="q8" value="B"> B) Too complex to understand.<br>
-                <input type="radio" name="q8" value="C"> C) Logically irrelevant to the conclusion (though perhaps psychologically relevant).<br>
-                <input type="radio" name="q8" value="D"> D) Sufficient but unacceptable.
-            </div>
-            <div class="form-group">
-                <label>9. The Appeal to Force (Argumentum ad Baculum) fallacy occurs when an arguer:</label>
-                <input type="radio" name="q9" value="A" required> A) Uses logically sound reasoning.<br>
-                <input type="radio" name="q9" value="B"> B) Cites an unqualified authority.<br>
-                <input type="radio" name="q9" value="C"> C) Poses a threat (physical or psychological) to persuade acceptance of a conclusion.<br>
-                <input type="radio" name="q9" value="D"> D) Evokes pity from the listener.
-            </div>
-            <div class="form-group">
-                <label>10. The Appeal to Pity (Argumentum ad Misericordiam) fallacy involves:</label>
-                <input type="radio" name="q10" value="A" required> A) Attacking the opponent's character.<br>
-                <input type="radio" name="q10" value="B"> B) Attempting to support a conclusion merely by evoking pity.<br>
-                <input type="radio" name="q10" value="C"> C) Applying a general rule to a case it wasn't meant to cover.<br>
-                <input type="radio" name="q10" value="D"> D) Using ambiguous language.
-            </div>
-            <div class="form-group">
-                <label>11. The Appeal to People (Argumentum ad Populum) fallacy attempts persuasion by appealing to:</label>
-                <input type="radio" name="q11" value="A" required> A) Logical evidence.<br>
-                <input type="radio" name="q11" value="B"> B) The testimony of qualified experts.<br>
-                <input type="radio" name="q11" value="C"> C) The desire for acceptance, esteem, or belonging within a group.<br>
-                <input type="radio" name="q11" value="D"> D) A small, unrepresentative sample.
-            </div>
-            <div class="form-group">
-                <label>12. The "direct approach" of Appeal to People involves:</label>
-                <input type="radio" name="q12" value="A" required> A) Focusing on an individual's relationship to the crowd.<br>
-                <input type="radio" name="q12" value="B"> B) Citing specific authorities.<br>
-                <input type="radio" name="q12" value="C"> C) Exciting the emotions of a large crowd to win acceptance (mob mentality).<br>
-                <input type="radio" name="q12" value="D"> D) Using complex statistical data.
-            </div>
-            <div class="form-group">
-                <label>13. The "Bandwagon" form of indirect Appeal to People argues that:</label>
-                <input type="radio" name="q13" value="A" required> A) A product is good because an admired person uses it.<br>
-                <input type="radio" name="q13" value="B"> B) A position is correct because the majority accepts it.<br>
-                <input type="radio" name="q13" value="C"> C) An idea is superior because only a select few accept it.<br>
-                <input type="radio" name="q13" value="D"> D) A conclusion follows from pity.
-            </div>
-            <div class="form-group">
-                <label>14. The "Appeal to Vanity" associates a product or idea with:</label>
-                <input type="radio" name="q14" value="A" required> A) The majority opinion.<br>
-                <input type="radio" name="q14" value="B"> B) Logical necessity.<br>
-                <input type="radio" name="q14" value="C"> C) Someone who is admired or pursued.<br>
-                <input type="radio" name="q14" value="D"> D) Scientific evidence.
-            </div>
-            <div class="form-group">
-                <label>15. The "Appeal to Snobbery" suggests an idea/product is desirable because:</label>
-                <input type="radio" name="q15" value="A" required> A) It is accepted by most people.<br>
-                <input type="radio" name="q15" value="B"> B) It makes one part of a select, superior group.<br>
-                <input type="radio" name="q15" value="C"> C) It evokes feelings of pity.<br>
-                <input type="radio" name="q15" value="D"> D) It involves a threat.
-            </div>
-            <div class="form-group">
-                <label>16. The Argument Against the Person (Argumentum ad Hominem) fallacy occurs when:</label>
-                <input type="radio" name="q16" value="A" required> A) An arguer appeals to the majority.<br>
-                <input type="radio" name="q16" value="B"> B) An arguer attacks the character or circumstances of the opposing arguer instead of the argument itself.<br>
-                <input type="radio" name="q16" value="C"> C) An arguer misrepresents the opponent's argument.<br>
-                <input type="radio" name="q16" value="D"> D) An arguer applies a general rule inappropriately.
-            </div>
-            <div class="form-group">
-                <label>17. The "Ad Hominem Abusive" fallacy involves:</label>
-                <input type="radio" name="q17" value="A" required> A) Pointing out the opponent's circumstances.<br>
-                <input type="radio" name="q17" value="B"> B) Claiming the opponent is hypocritical.<br>
-                <input type="radio" name="q17" value="C"> C) Verbally abusing the opponent.<br>
-                <input type="radio" name="q17" value="D"> D) Misrepresenting the opponent's argument.
-            </div>
-            <div class="form-group">
-                <label>18. The "Ad Hominem Circumstantial" fallacy attempts to discredit an argument by:</label>
-                <input type="radio" name="q18" value="A" required> A) Verbally abusing the opponent.<br>
-                <input type="radio" name="q18" value="B"> B) Alluding to circumstances that allegedly affect the opponent, suggesting predisposition.<br>
-                <input type="radio" name="q18" value="C"> C) Citing an unqualified authority.<br>
-                <input type="radio" name="q18" value="D"> D) Pointing out that the opponent doesn't follow their own advice.
-            </div>
-            <div class="form-group">
-                <label>19. The "Tu Quoque" (You Too) fallacy involves attempting to make the first arguer appear:</label>
-                <input type="radio" name="q19" value="A" required> A) Unintelligent.<br>
-                <input type="radio" name="q19" value="B"> B) Unqualified.<br>
-                <input type="radio" name="q19" value="C"> C) Hypocritical or arguing in bad faith.<br>
-                <input type="radio" name="q19" value="D"> D) Emotionally unstable.
-            </div>
-            <div class="form-group">
-                <label>20. The fallacy of "Accident" is committed when:</label>
-                <input type="radio" name="q20" value="A" required> A) A general rule is applied to a specific case it was not intended to cover.<br>
-                <input type="radio" name="q20" value="B"> B) An arguer appeals to ignorance.<br>
-                <input type="radio" name="q20" value="C"> C) A conclusion is drawn from an analogy that is not strong enough.<br>
-                <input type="radio" name="q20" value="D"> D) An arguer distorts an opponent's argument.
-            </div>
-            <div class="form-group">
-                <label>21. The "Straw Man" fallacy involves:</label>
-                <input type="radio" name="q21" value="A" required> A) Attacking the person making the argument.<br>
-                <input type="radio" name="q21" value="B"> B) Distorting an opponent's argument to make it easier to attack.<br>
-                <input type="radio" name="q21" value="C"> C) Applying a general rule incorrectly.<br>
-                <input type="radio" name="q21" value="D"> D) Appealing to pity.
-            </div>
-            <div class="form-group">
-                <label>22. The "Missing the Point" (Ignoratio Elenchi) fallacy occurs when:</label>
-                <input type="radio" name="q22" value="A" required> A) The premises support one particular conclusion, but a different, often related conclusion is drawn.<br>
-                <input type="radio" name="q22" value="B"> B) An arguer changes the subject entirely.<br>
-                <input type="radio" name="q22" value="C"> C) An arguer attacks a distorted version of the opponent's argument.<br>
-                <input type="radio" name="q22" value="D"> D) A general rule is misapplied.
-            </div>
-            <div class="form-group">
-                <label>23. The "Red Herring" fallacy involves:</label>
-                <input type="radio" name="q23" value="A" required> A) Attacking the person rather than the argument.<br>
-                <input type="radio" name="q23" value="B"> B) Drawing the wrong conclusion from the premises.<br>
-                <input type="radio" name="q23" value="C"> C) Distorting the opponent's argument.<br>
-                <input type="radio" name="q23" value="D"> D) Diverting the listener's attention by changing the subject to a different or subtly related one.
-            </div>
-            <div class="form-group">
-                <label>24. How can Straw Man be distinguished from Red Herring?</label>
-                <input type="radio" name="q24" value="A" required> A) Red Herring always involves two arguers, Straw Man does not.<br>
-                <input type="radio" name="q24" value="B"> B) Straw Man involves distorting the original argument, while Red Herring involves changing the subject.<br>
-                <input type="radio" name="q24" value="C"> C) Straw Man attacks the person, Red Herring attacks the argument.<br>
-                <input type="radio" name="q24" value="D"> D) Red Herring uses threats, Straw Man uses pity.
-            </div>
-            <div class="form-group">
-                <label>25. Fallacies of Weak Induction occur because the connection between premises and conclusion is:</label>
-                <input type="radio" name="q25" value="A" required> A) Logically irrelevant.<br>
-                <input type="radio" name="q25" value="B"> B) Based on ambiguity.<br>
-                <input type="radio" name="q25" value="C"> C) Too weak to support the conclusion strongly.<br>
-                <input type="radio" name="q25" value="D"> D) Based on unwarranted assumptions.
-            </div>
-            <div class="form-group">
-                <label>26. The Appeal to Unqualified Authority (Ad Verecundiam) fallacy occurs when the cited authority:</label>
-                <input type="radio" name="q26" value="A" required> A) Is a recognized expert in the relevant field.<br>
-                <input type="radio" name="q26" value="B"> B) Might lack credibility (expertise, bias, motive to lie).<br>
-                <input type="radio" name="q26" value="C"> C) Provides strong evidence.<br>
-                <input type="radio" name="q26" value="D"> D) Agrees with the majority opinion.
-            </div>
-            <div class="form-group">
-                <label>27. The Appeal to Ignorance (Ad Ignorantiam) fallacy states that a conclusion is true because:</label>
-                <input type="radio" name="q27" value="A" required> A) There is positive evidence for it.<br>
-                <input type="radio" name="q27" value="B"> B) An expert supports it.<br>
-                <input type="radio" name="q27" value="C"> C) It has not been proven false (or false because it has not been proven true).<br>
-                <input type="radio" name="q27" value="D"> D) Most people believe it.
-            </div>
-            <div class="form-group">
-                <label>28. Hasty Generalization (Converse Accident) occurs when a conclusion about a whole group is drawn from:</label>
-                <input type="radio" name="q28" value="A" required> A) A large, representative sample.<br>
-                <input type="radio" name="q28" value="B"> B) A premise based on definition.<br>
-                <input type="radio" name="q28" value="C"> C) A sample that is likely atypical (e.g., too small or not random).<br>
-                <input type="radio" name="q28" value="D"> D) A chain reaction of causes.
-            </div>
-            <div class="form-group">
-                <label>29. The False Cause fallacy occurs when the link between premises and conclusion depends on:</label>
-                <input type="radio" name="q29" value="A" required> A) A strong statistical correlation.<br>
-                <input type="radio" name="q29" value="B"> B) An imagined causal connection that probably doesn't exist.<br>
-                <input type="radio" name="q29" value="C"> C) A valid deductive inference.<br>
-                <input type="radio" name="q29" value="D"> D) An appeal to authority.
-            </div>
-            <div class="form-group">
-                <label>30. The post hoc ergo propter hoc variety of False Cause assumes that because one event preceded another, the first event:</label>
-                <input type="radio" name="q30" value="A" required> A) Was merely correlated with the second.<br>
-                <input type="radio" name="q30" value="B"> B) Was caused by the second event.<br>
-                <input type="radio" name="q30" value="C"> C) Caused the second event.<br>
-                <input type="radio" name="q30" value="D"> D) Was irrelevant to the second event.
-            </div>
-            <div class="form-group">
-                <label>31. The "oversimplified cause" fallacy occurs when:</label>
-                <input type="radio" name="q31" value="A" required> A) No cause can be identified for an effect.<br>
-                <input type="radio" name="q31" value="B"> B) A multitude of causes is responsible, but the arguer selects just one as the sole cause.<br>
-                <input type="radio" name="q31" value="C"> C) An effect is mistaken for a cause.<br>
-                <input type="radio" name="q31" value="D"> D) A conclusion is based on superstition.
-            </div>
-            <div class="form-group">
-                <label>32. The Slippery Slope fallacy assumes:</label>
-                <input type="radio" name="q32" value="A" required> A) A causal connection exists based only on temporal succession.<br>
-                <input type="radio" name="q32" value="B"> B) A chain reaction of events will occur, usually with insufficient evidence for the connections.<br>
-                <input type="radio" name="q32" value="C"> C) An analogy holds between two dissimilar things.<br>
-                <input type="radio" name="q32" value="D"> D) A general rule applies universally without exception.
-            </div>
-            <div class="form-group">
-                <label>33. The Weak Analogy fallacy is committed when:</label>
-                <input type="radio" name="q33" value="A" required> A) An argument uses a comparison between two things.<br>
-                <input type="radio" name="q33" value="B"> B) The analogy or similarity between the two things being compared is not strong enough to support the conclusion.<br>
-                <input type="radio" name="q33" value="C"> C) An argument draws a conclusion about a group based on a sample.<br>
-                <input type="radio" name="q33" value="D"> D) An arguer cites an expert outside their field.
-            </div>
-            <div class="form-group">
-                <label>34. Fallacies of Presumption arise because the premises:</label>
-                <input type="radio" name="q34" value="A" required> A) Are irrelevant to the conclusion.<br>
-                <input type="radio" name="q34" value="B"> B) Provide insufficient support for the conclusion.<br>
-                <input type="radio" name="q34" value="C"> C) Presume what they purport to prove.<br>
-                <input type="radio" name="q34" value="D"> D) Contain ambiguous words.
-            </div>
-            <div class="form-group">
-                <label>35. Begging the Question (Petitio Principii) involves:</label>
-                <input type="radio" name="q35" value="A" required> A) Attacking the questioner rather than the question.<br>
-                <input type="radio" name="q35" value="B"> B) Asking a question that presumes something unproven.<br>
-                <input type="radio" name="q35" value="C"> C) Assuming the truth of the conclusion one is trying to prove (often by leaving out a key premise, restating the premise, or circular reasoning).<br>
-                <input type="radio" name="q35" value="D"> D) Appealing to ignorance.
-            </div>
-            <div class="form-group">
-                <label>36. Leaving out a possibly false key premise while creating the illusion it isn't needed is a form of:</label>
-                <input type="radio" name="q36" value="A" required> A) Complex Question.<br>
-                <input type="radio" name="q36" value="B"> B) False Dichotomy.<br>
-                <input type="radio" name="q36" value="C"> C) Begging the Question.<br>
-                <input type="radio" name="q36" value="D"> D) Suppressed Evidence.
-            </div>
-            <div class="form-group">
-                <label>37. Reasoning in a circle (e.g., "A is true because B is true, and B is true because A is true") is a form of:</label>
-                <input type="radio" name="q37" value="A" required> A) Hasty Generalization.<br>
-                <input type="radio" name="q37" value="B"> B) Begging the Question.<br>
-                <input type="radio" name="q37" value="C"> C) Appeal to Force.<br>
-                <input type="radio" name="q37" value="D"> D) Equivocation.
-            </div>
-            <div class="form-group">
-                <label>38. The Complex Question fallacy involves:</label>
-                <input type="radio" name="q38" value="A" required> A) Asking a question that is too difficult to answer.<br>
-                <input type="radio" name="q38" value="B"> B) Asking two or more questions in the guise of a single question.<br>
-                <input type="radio" name="q38" value="C"> C) Begging the question in interrogative form.<br>
-                <input type="radio" name="q38" value="D"> D) Asking a question that has no relevance.
-            </div>
-            <div class="form-group">
-                <label>39. The False Dichotomy (or False Binary) fallacy is committed when:</label>
-                <input type="radio" name="q39" value="A" required> A) An arguer presents two alternatives as if they were the only ones available, when others exist.<br>
-                <input type="radio" name="q39" value="B"> B) A key piece of evidence is ignored.<br>
-                <input type="radio" name="q39" value="C"> C) An argument uses circular reasoning.<br>
-                <input type="radio" name="q39" value="D"> D) A question presumes an unproven condition.
-            </div>
-            <div class="form-group">
-                <label>40. The Suppressed Evidence fallacy occurs when an arguer:</label>
-                <input type="radio" name="q40" value="A" required> A) Presents irrelevant premises.<br>
-                <input type="radio" name="q40" value="B"> B) Ignores important evidence that outweighs the presented evidence and entails a different conclusion.<br>
-                <input type="radio" name="q40" value="C"> C) Uses ambiguous language.<br>
-                <input type="radio" name="q40" value="D"> D) Commits a formal fallacy.
-            </div>
-            <div class="form-group">
-                <label>41. Fallacies of Ambiguity arise from:</label>
-                <input type="radio" name="q41" value="A" required> A) Irrelevant premises.<br>
-                <input type="radio" name="q41" value="B"> B) Insufficient evidence.<br>
-                <input type="radio" name="q41" value="C"> C) An ambiguity in the meaning of words or statements.<br>
-                <input type="radio" name="q41" value="D"> D) Presuming the truth of the conclusion.
-            </div>
-            <div class="form-group">
-                <label>42. The fallacy of Equivocation occurs when:</label>
-                <input type="radio" name="q42" value="A" required> A) A statement's grammatical structure allows multiple interpretations.<br>
-                <input type="radio" name="q42" value="B"> B) A word or phrase is used in two different senses within the same argument.<br>
-                <input type="radio" name="q42" value="C"> C) An arguer misinterprets an opponent's ambiguous statement.<br>
-                <input type="radio" name="q42" value="D"> D) An attribute is improperly transferred from whole to parts.
-            </div>
-            <div class="form-group">
-                <label>43. The fallacy of Amphiboly occurs when:</label>
-                <input type="radio" name="q43" value="A" required> A) A word has multiple meanings.<br>
-                <input type="radio" name="q43" value="B"> B) An arguer draws a conclusion based on misinterpreting a grammatically ambiguous statement (often made by someone else).<br>
-                <input type="radio" name="q43" value="C"> C) An attribute is improperly transferred from parts to whole.<br>
-                <input type="radio" name="q43" value="D"> D) An arguer uses circular reasoning.
-            </div>
-            <div class="form-group">
-                <label>44. Fallacies of Grammatical Analogy (Composition and Division) appear plausible because:</label>
-                <input type="radio" name="q44" value="A" required> A) They rely on emotional appeals.<br>
-                <input type="radio" name="q44" value="B"> B) They resemble arguments with correct grammatical structures.<br>
-                <input type="radio" name="q44" value="C"> C) They always have true premises.<br>
-                <input type="radio" name="q44" value="D"> D) They use precise language.
-            </div>
-            <div class="form-group">
-                <label>45. The fallacy of Composition involves an erroneous transference of an attribute from:</label>
-                <input type="radio" name="q45" value="A" required> A) Whole to parts.<br>
-                <input type="radio" name="q45" value="B"> B) Parts to whole.<br>
-                <input type="radio" name="q45" value="C"> C) One premise to another.<br>
-                <input type="radio" name="q45" value="D"> D) Conclusion back to premises.
-            </div>
-            <div class="form-group">
-                <label>46. Arguing that because each player on a team is excellent, the team as a whole must be excellent, likely commits the fallacy of:</label>
-                <input type="radio" name="q46" value="A" required> A) Division.<br>
-                <input type="radio" name="q46" value="B"> B) Hasty Generalization.<br>
-                <input type="radio" name="q46" value="C"> C) Composition.<br>
-                <input type="radio" name="q46" value="D"> D) Accident.
-            </div>
-            <div class="form-group">
-                <label>47. The fallacy of Division involves an erroneous transference of an attribute from:</label>
-                <input type="radio" name="q47" value="A" required> A) Parts to whole.<br>
-                <input type="radio" name="q47" value="B"> B) Whole to parts.<br>
-                <input type="radio" name="q47" value="C"> C) Premises to conclusion.<br>
-                <input type="radio" name="q47" value="D"> D) One case to another via analogy.
-            </div>
-            <div class="form-group">
-                <label>48. Arguing that because a machine is heavy, its component parts must be heavy, likely commits the fallacy of:</label>
-                <input type="radio" name="q48" value="A" required> A) Composition.<br>
-                <input type="radio" name="q48" value="B"> B) Accident.<br>
-                <input type="radio" name="q48" value="C"> C) Hasty Generalization.<br>
-                <input type="radio" name="q48" value="D"> D) Division.
-            </div>
-            <div class="form-group">
-                <label>49. How can Composition be distinguished from Hasty Generalization?</label>
-                <input type="radio" name="q49" value="A" required> A) Composition applies only to deductive arguments.<br>
-                <input type="radio" name="q49" value="B"> B) Hasty Generalization moves from parts to whole, Composition from specific to general.<br>
-                <input type="radio" name="q49" value="C"> C) Composition involves transferring an attribute from parts to the whole class (collective predication), while Hasty Generalization moves from an atypical sample to a general rule (distributive predication).<br>
-                <input type="radio" name="q49" value="D"> D) Hasty Generalization uses ambiguity, Composition does not.
-            </div>
-            <div class="form-group">
-                <label>50. How can Division be distinguished from Accident?</label>
-                <input type="radio" name="q50" value="A" required> A) Division applies only to inductive arguments.<br>
-                <input type="radio" name="q50" value="B"> B) Accident moves from whole to parts, Division from general to specific.<br>
-                <input type="radio" name="q50" value="C"> C) Division involves transferring an attribute from a class/whole to its parts/members, while Accident misapplies a general rule to a specific case.<br>
-                <input type="radio" name="q50" value="D"> D) Accident uses ambiguity, Division does not.
-            </div>
-
+            <!-- Chapter 5 Multiple-Choice Questions -->
+             <div class="form-group">
+                 <label>1. In a political sense, a constitution primarily signifies:</label>
+                 <input type="radio" name="q1" value="A" required> A) The physical health of the nation's leader.<br>
+                 <input type="radio" name="q1" value="B"> B) The founding document or body of rules for a state's government.<br>
+                 <input type="radio" name="q1" value="C"> C) The membership list of a political party.<br>
+                 <input type="radio" name="q1" value="D"> D) The bylaws of a trade union.
+             </div>
+             <div class="form-group">
+                 <label>2. A constitution is often described as the 'mother of all laws' because:</label>
+                 <input type="radio" name="q2" value="A" required> A) It is the longest legal document.<br>
+                 <input type="radio" name="q2" value="B"> B) All other ordinary laws derive from and must conform to it.<br>
+                 <input type="radio" name="q2" value="C"> C) It deals primarily with family law.<br>
+                 <input type="radio" name="q2" value="D"> D) It was written by the 'founding fathers'.
+             </div>
+             <div class="form-group">
+                 <label>3. The feature of 'Generality' distinguishes constitutions from other laws in that constitutions:</label>
+                 <input type="radio" name="q3" value="A" required> A) Provide highly detailed rules for specific situations.<br>
+                 <input type="radio" name="q3" value="B"> B) Set out the general framework and fundamental principles of government.<br>
+                 <input type="radio" name="q3" value="C"> C) Are only applicable to government officials.<br>
+                 <input type="radio" name="q3" value="D"> D) Change frequently based on political whims.
+             </div>
+             <div class="form-group">
+                 <label>4. 'Permanency' as a feature of constitutions suggests they are:</label>
+                 <input type="radio" name="q4" value="A" required> A) Meant to be temporary and easily changed.<br>
+                 <input type="radio" name="q4" value="B"> B) Intended to be stable and lasting, not subject to frequent or easy alteration.<br>
+                 <input type="radio" name="q4" value="C"> C) Only relevant during times of crisis.<br>
+                 <input type="radio" name="q4" value="D"> D) Rewritten after every election.
+             </div>
+             <div class="form-group">
+                 <label>5. Constitutional 'Supremacy' means that:</label>
+                 <input type="radio" name="q5" value="A" required> A) The legislature can override the constitution at any time.<br>
+                 <input type="radio" name="q5" value="B"> B) The constitution is the highest law, taking precedence over all other laws.<br>
+                 <input type="radio" name="q5" value="C"> C) The executive branch is superior to the constitution.<br>
+                 <input type="radio" name="q5" value="D"> D) International law always supersedes the constitution.
+             </div>
+             <div class="form-group">
+                 <label>6. A 'codified document' refers to a constitution that is:</label>
+                 <input type="radio" name="q6" value="A" required> A) Based entirely on unwritten customs.<br>
+                 <input type="radio" name="q6" value="B"> B) Written down, often in a single, systematic document.<br>
+                 <input type="radio" name="q6" value="C"> C) Secret and known only to rulers.<br>
+                 <input type="radio" name="q6" value="D"> D) Composed of various historical traditions.
+             </div>
+             <div class="form-group">
+                 <label>7. One of the major purposes of a constitution is to serve as a framework for government, meaning it:</label>
+                 <input type="radio" name="q7" value="A" required> A) Lists all citizens by name.<br>
+                 <input type="radio" name="q7" value="B"> B) Details foreign policy objectives.<br>
+                 <input type="radio" name="q7" value="C"> C) Organizes the operation and guides the powers of government branches.<br>
+                 <input type="radio" name="q7" value="D"> D) Prescribes specific economic policies.
+             </div>
+             <div class="form-group">
+                 <label>8. Constitutions limit the powers of government primarily to:</label>
+                 <input type="radio" name="q8" value="A" required> A) Make the government ineffective.<br>
+                 <input type="radio" name="q8" value="B"> B) Protect the rights and freedoms of citizens from arbitrary rule.<br>
+                 <input type="radio" name="q8" value="C"> C) Ensure the ruling party stays in power indefinitely.<br>
+                 <input type="radio" name="q8" value="D"> D) Simplify the process of law-making.
+             </div>
+             <div class="form-group">
+                 <label>9. The Preamble of a constitution, like that of the FDRE Constitution, typically serves to:</label>
+                 <input type="radio" name="q9" value="A" required> A) List specific criminal offences.<br>
+                 <input type="radio" name="q9" value="B"> B) Outline the fundamental values, goals, and ideological basis of the state.<br>
+                 <input type="radio" name="q9" value="C"> C) Detail the procedures for amending the constitution.<br>
+                 <input type="radio" name="q9" value="D"> D) Name the members of the judiciary.
+             </div>
+             <div class="form-group">
+                 <label>10. A written constitution is one where:</label>
+                 <input type="radio" name="q10" value="A" required> A) Fundamental principles are based only on tradition.<br>
+                 <input type="radio" name="q10" value="B"> B) Provisions are embodied in a single formal document or instrument.<br>
+                 <input type="radio" name="q10" value="C"> C) Rules can be changed easily by the government.<br>
+                 <input type="radio" name="q10" value="D"> D) Courts have no power of interpretation.
+             </div>
+              <div class="form-group">
+                 <label>11. An unwritten constitution, like that of the UK, primarily consists of:</label>
+                 <input type="radio" name="q11" value="A" required> A) A single, comprehensive document.<br>
+                 <input type="radio" name="q11" value="B"> B) Customs, conventions, traditions, and some written laws bearing constitutional weight.<br>
+                 <input type="radio" name="q11" value="C"> C) Rules dictated by the monarch alone.<br>
+                 <input type="radio" name="q11" value="D"> D) Laws imposed by international bodies.
+             </div>
+             <div class="form-group">
+                 <label>12. A merit of a written constitution is that it:</label>
+                 <input type="radio" name="q12" value="A" required> A) Is highly flexible and adapts instantly to change.<br>
+                 <input type="radio" name="q12" value="B"> B) Creates ambiguity and confusion.<br>
+                 <input type="radio" name="q12" value="C"> C) Is easily accessible to citizens, providing clarity and definiteness.<br>
+                 <input type="radio" name="q12" value="D"> D) Prevents judicial interpretation.
+             </div>
+             <div class="form-group">
+                 <label>13. A demerit of an unwritten constitution can be that it:</label>
+                 <input type="radio" name="q13" value="A" required> A) Is too rigid and difficult to change.<br>
+                 <input type="radio" name="q13" value="B"> B) Is not easily accessible or clear to the public, potentially leading to confusion.<br>
+                 <input type="radio" name="q13" value="C"> C) Prevents gradual adaptation.<br>
+                 <input type="radio" name="q13" value="D"> D) Is unsuitable for monarchical systems.
+             </div>
+             <div class="form-group">
+                 <label>14. A 'rigid' constitution is one that:</label>
+                 <input type="radio" name="q14" value="A" required> A) Can be amended through the ordinary legislative process.<br>
+                 <input type="radio" name="q14" value="B"> B) Requires a special, more difficult procedure for amendment.<br>
+                 <input type="radio" name="q14" value="C"> C) Is unwritten.<br>
+                 <input type="radio" name="q14" value="D"> D) Has no provision for amendment.
+             </div>
+             <div class="form-group">
+                 <label>15. A 'flexible' constitution allows for amendment through:</label>
+                 <input type="radio" name="q15" value="A" required> A) Only a national referendum.<br>
+                 <input type="radio" name="q15" value="B"> B) A complex process involving multiple government branches.<br>
+                 <input type="radio" name="q15" value="C"> C) The same process used for enacting ordinary laws, often by a simple majority.<br>
+                 <input type="radio" name="q15" value="D"> D) Judicial review only.
+             </div>
+             <div class="form-group">
+                 <label>16. An 'effective' constitution is one where:</label>
+                 <input type="radio" name="q16" value="A" required> A) The text accurately describes government limits, but these are ignored in practice.<br>
+                 <input type="radio" name="q16" value="B"> B) Government practices largely correspond to the provisions of the constitution.<br>
+                 <input type="radio" name="q16" value="C"> C) The constitution exists only on paper with no real power.<br>
+                 <input type="radio" name="q16" value="D"> D) The amendment process is impossible.
+             </div>
+             <div class="form-group">
+                 <label>17. A 'nominal' constitution exists when:</label>
+                 <input type="radio" name="q17" value="A" required> A) The constitution fully controls government behavior.<br>
+                 <input type="radio" name="q17" value="B"> B) The text describes limits and principles, but these are largely ignored in practice.<br>
+                 <input type="radio" name="q17" value="C"> C) There is no written constitutional document.<br>
+                 <input type="radio" name="q17" value="D"> D) The government strictly adheres to the rule of law.
+             </div>
+             <div class="form-group">
+                 <label>18. A federal constitution is characterized by:</label>
+                 <input type="radio" name="q18" value="A" required> A) Concentration of all power in the central government.<br>
+                 <input type="radio" name="q18" value="B"> B) Distribution of power between central (federal) and regional/state governments.<br>
+                 <input type="radio" name="q18" value="C"> C) The absence of a judicial branch.<br>
+                 <input type="radio" name="q18" value="D"> D) An unwritten format.
+             </div>
+             <div class="form-group">
+                 <label>19. A unitary constitution features:</label>
+                 <input type="radio" name="q19" value="A" required> A) Power divided between national and local units by the constitution.<br>
+                 <input type="radio" name="q19" value="B"> B) Concentration of state power primarily in the hands of the central government.<br>
+                 <input type="radio" name="q19" value="C"> C) Co-equal status between central and regional governments.<br>
+                 <input type="radio" name="q19" value="D"> D) A requirement for all laws to be approved by regional bodies.
+             </div>
+             <div class="form-group">
+                 <label>20. Constitutionalism refers to the doctrine or belief that:</label>
+                 <input type="radio" name="q20" value="A" required> A) Governments should have unlimited power.<br>
+                 <input type="radio" name="q20" value="B"> B) Governments should be limited by law and accountable under a constitution.<br>
+                 <input type="radio" name="q20" value="C"> C) Constitutions are merely symbolic documents.<br>
+                 <input type="radio" name="q20" value="D"> D) Rulers are above the law.
+             </div>
+              <div class="form-group">
+                 <label>21. Prior to 1931, Ethiopia's constitutional experience was characterized by:</label>
+                 <input type="radio" name="q21" value="A" required> A) A series of modern, written constitutions.<br>
+                 <input type="radio" name="q21" value="B"> B) An unwritten form, based on traditional documents and practices.<br>
+                 <input type="radio" name="q21" value="C"> C) The complete absence of any form of legal or traditional constraints on rulers.<br>
+                 <input type="radio" name="q21" value="D"> D) A system imposed by foreign powers.
+             </div>
+             <div class="form-group">
+                 <label>22. The Fetha Negest (Law of the Kings) served historically in Ethiopia as a:</label>
+                 <input type="radio" name="q22" value="A" required> A) Modern democratic constitution.<br>
+                 <input type="radio" name="q22" value="B"> B) Religious and secular legal compilation influencing law and governance.<br>
+                 <input type="radio" name="q22" value="C"> C) Declaration of independence.<br>
+                 <input type="radio" name="q22" value="D"> D) Trade agreement.
+             </div>
+             <div class="form-group">
+                 <label>23. The Kibre Negest (Glory of Kings) is primarily significant for:</label>
+                 <input type="radio" name="q23" value="A" required> A) Establishing detailed administrative procedures.<br>
+                 <input type="radio" name="q23" value="B"> B) Documenting the mythical origins and legitimizing the Solomonic dynasty.<br>
+                 <input type="radio" name="q23" value="C"> C) Outlining modern human rights principles.<br>
+                 <input type="radio" name="q23" value="D"> D) Serving as Ethiopia's first written penal code.
+             </div>
+             <div class="form-group">
+                 <label>24. Ethiopia's first written constitution was promulgated in:</label>
+                 <input type="radio" name="q24" value="A" required> A) 1889<br>
+                 <input type="radio" name="q24" value="B"> B) 1931<br>
+                 <input type="radio" name="q24" value="C"> C) 1955<br>
+                 <input type="radio" name="q24" value="D"> D) 1987
+             </div>
+             <div class="form-group">
+                 <label>25. The 1931 Constitution of Ethiopia primarily served to:</label>
+                 <input type="radio" name="q25" value="A" required> A) Establish a federal democratic republic.<br>
+                 <input type="radio" name="q25" value="B"> B) Limit the powers of the nobility.<br>
+                 <input type="radio" name="q25" value="C"> C) Centralize state power and legitimize the Emperor's authority.<br>
+                 <input type="radio" name="q25" value="D"> D) Grant universal suffrage.
+             </div>
+             <div class="form-group">
+                 <label>26. The 1955 Revised Constitution of Ethiopia, compared to the 1931 version:</label>
+                 <input type="radio" name="q26" value="A" required> A) Significantly reduced the Emperor's powers.<br>
+                 <input type="radio" name="q26" value="B"> B) Introduced federalism.<br>
+                 <input type="radio" name="q26" value="C"> C) Continued to reinforce centralization but included more detailed rights provisions (though largely symbolic).<br>
+                 <input type="radio" name="q26" value="D"> D) Abolished the monarchy.
+             </div>
+             <div class="form-group">
+                 <label>27. The 1987 Constitution established the:</label>
+                 <input type="radio" name="q27" value="A" required> A) Imperial Ethiopian Government.<br>
+                 <input type="radio" name="q27" value="B"> B) Transitional Government of Ethiopia.<br>
+                 <input type="radio" name="q27" value="C"> C) People's Democratic Republic of Ethiopia (PDRE).<br>
+                 <input type="radio" name="q27" value="D"> D) Federal Democratic Republic of Ethiopia (FDRE).
+             </div>
+             <div class="form-group">
+                 <label>28. A key feature of the 1987 PDRE Constitution was its:</label>
+                 <input type="radio" name="q28" value="A" required> A) Embrace of multi-party democracy.<br>
+                 <input type="radio" name="q28" value="B"> B) Aim to establish a state based on Marxist-Leninist principles and a one-party system.<br>
+                 <input type="radio" name="q28" value="C"> C) Restoration of the monarchy.<br>
+                 <input type="radio" name="q28" value="D"> D) Strong emphasis on regional autonomy.
+             </div>
+             <div class="form-group">
+                 <label>29. The current 1995 FDRE Constitution established:</label>
+                 <input type="radio" name="q29" value="A" required> A) A unitary state.<br>
+                 <input type="radio" name="q29" value="B"> B) A constitutional monarchy.<br>
+                 <input type="radio" name="q29" value="C"> C) An ethnic-based federal system and a parliamentary republic.<br>
+                 <input type="radio" name="q29" value="D"> D) A presidential system with unlimited executive power.
+             </div>
+             <div class="form-group">
+                 <label>30. Democracy, derived from Greek, literally means:</label>
+                 <input type="radio" name="q30" value="A" required> A) Rule by the wealthy.<br>
+                 <input type="radio" name="q30" value="B"> B) Rule by the military.<br>
+                 <input type="radio" name="q30" value="C"> C) Rule by the people.<br>
+                 <input type="radio" name="q30" value="D"> D) Rule by the aristocracy.
+             </div>
+              <div class="form-group">
+                 <label>31. Direct democracy involves citizens:</label>
+                 <input type="radio" name="q31" value="A" required> A) Electing representatives to make decisions for them.<br>
+                 <input type="radio" name="q31" value="B"> B) Participating directly in making laws and policy decisions.<br>
+                 <input type="radio" name="q31" value="C"> C) Obeying the commands of a single ruler.<br>
+                 <input type="radio" name="q31" value="D"> D) Having no say in government affairs.
+             </div>
+             <div class="form-group">
+                 <label>32. Indirect or representative democracy involves citizens:</label>
+                 <input type="radio" name="q32" value="A" required> A) Voting on every law themselves.<br>
+                 <input type="radio" name="q32" value="B"> B) Electing officials to govern on their behalf.<br>
+                 <input type="radio" name="q32" value="C"> C) Following rules set by traditional elders.<br>
+                 <input type="radio" name="q32" value="D"> D) Living under military rule.
+             </div>
+             <div class="form-group">
+                 <label>33. According to Robert Dahl, a minimal condition for modern democracy includes:</label>
+                 <input type="radio" name="q33" value="A" required> A) State control of the media.<br>
+                 <input type="radio" name="q33" value="B"> B) Elected officials chosen in frequent and fair elections.<br>
+                 <input type="radio" name="q33" value="C"> C) A single-party political system.<br>
+                 <input type="radio" name="q33" value="D"> D) Suppression of alternative sources of information.
+             </div>
+             <div class="form-group">
+                 <label>34. The core value of 'Liberty' in democracy emphasizes:</label>
+                 <input type="radio" name="q34" value="A" required> A) Government control over personal choices.<br>
+                 <input type="radio" name="q34" value="B"> B) Personal and political freedoms, such as freedom from arbitrary arrest and freedom of expression.<br>
+                 <input type="radio" name="q34" value="C"> C) The duty to obey all government orders without question.<br>
+                 <input type="radio" name="q34" value="D"> D) Economic equality above all else.
+             </div>
+             <div class="form-group">
+                 <label>35. 'Equality' as a democratic principle includes political equality, meaning:</label>
+                 <input type="radio" name="q35" value="A" required> A) Equal distribution of wealth.<br>
+                 <input type="radio" name="q35" value="B"> B) All citizens having equal standing and rights in the political process (e.g., one person, one vote).<br>
+                 <input type="radio" name="q35" value="C"> C) Social hierarchies based on birth.<br>
+                 <input type="radio" name="q35" value="D"> D) Different voting rights based on education level.
+             </div>
+             <div class="form-group">
+                 <label>36. Popular Sovereignty implies that:</label>
+                 <input type="radio" name="q36" value="A" required> A) The government is the ultimate source of authority.<br>
+                 <input type="radio" name="q36" value="B"> B) The ultimate source of political authority resides in the people.<br>
+                 <input type="radio" name="q36" value="C"> C) Foreign powers dictate government policy.<br>
+                 <input type="radio" name="q36" value="D"> D) Military leaders hold supreme power.
+             </div>
+             <div class="form-group">
+                 <label>37. Constitutional Supremacy as a democratic principle means:</label>
+                 <input type="radio" name="q37" value="A" required> A) The constitution can be ignored by the government.<br>
+                 <input type="radio" name="q37" value="B"> B) The constitution is the highest law, binding on everyone, including the government.<br>
+                 <input type="radio" name="q37" value="C"> C) Laws are made by judges, not the legislature.<br>
+                 <input type="radio" name="q37" value="D"> D) The executive branch holds supreme power.
+             </div>
+             <div class="form-group">
+                 <label>38. The 'Rule of Law' requires that:</label>
+                 <input type="radio" name="q38" value="A" required> A) Rulers are above the law.<br>
+                 <input type="radio" name="q38" value="B"> B) Society is governed by laws that apply equally to everyone, including the government.<br>
+                 <input type="radio" name="q38" value="C"> C) Laws can be applied arbitrarily.<br>
+                 <input type="radio" name="q38" value="D"> D) Only the wealthy are subject to legal processes.
+             </div>
+             <div class="form-group">
+                 <label>39. Secularism in a democratic context generally implies:</label>
+                 <input type="radio" name="q39" value="A" required> A) The establishment of an official state religion.<br>
+                 <input type="radio" name="q39" value="B"> B) Separation of state institutions and religious institutions.<br>
+                 <input type="radio" name="q39" value="C"> C) Suppression of all religious practice.<br>
+                 <input type="radio" name="q39" value="D"> D) Government funding for religious education only.
+             </div>
+             <div class="form-group">
+                 <label>40. The principle of 'Separation of Powers' aims to:</label>
+                 <input type="radio" name="q40" value="A" required> A) Concentrate all government power in one branch.<br>
+                 <input type="radio" name="q40" value="B"> B) Divide government powers among different branches (legislative, executive, judicial) to prevent tyranny.<br>
+                 <input type="radio" name="q40" value="C"> C) Eliminate the judicial branch.<br>
+                 <input type="radio" name="q40" value="D"> D) Make government decision-making faster.
+             </div>
+              <div class="form-group">
+                 <label>41. Democratization refers to the:</label>
+                 <input type="radio" name="q41" value="A" required> A) Process of transition from authoritarian rule towards a democratic regime.<br>
+                 <input type="radio" name="q41" value="B"> B) Consolidation of power by a single leader.<br>
+                 <input type="radio" name="q41" value="C"> C) Abandonment of elections.<br>
+                 <input type="radio" name="q41" value="D"> D) Establishment of a state-controlled economy.
+             </div>
+             <div class="form-group">
+                 <label>42. Key actors in democratization often include:</label>
+                 <input type="radio" name="q42" value="A" required> A) Only the military.<br>
+                 <input type="radio" name="q42" value="B"> B) Only international organizations.<br>
+                 <input type="radio" name="q42" value="C"> C) Political parties, media, and civil society organizations.<br>
+                 <input type="radio" name="q42" value="D"> D) Only the incumbent authoritarian rulers.
+             </div>
+             <div class="form-group">
+                 <label>43. Human rights are generally understood as:</label>
+                 <input type="radio" name="q43" value="A" required> A) Privileges granted by governments that can be easily revoked.<br>
+                 <input type="radio" name="q43" value="B"> B) Basic entitlements belonging to all individuals simply because they are human.<br>
+                 <input type="radio" name="q43" value="C"> C) Rights applicable only to citizens of wealthy nations.<br>
+                 <input type="radio" name="q43" value="D"> D) Obligations imposed on citizens by the state.
+             </div>
+             <div class="form-group">
+                 <label>44. The principle of 'Universality' of human rights means they:</label>
+                 <input type="radio" name="q44" value="A" required> A) Apply only in certain countries.<br>
+                 <input type="radio" name="q44" value="B"> B) Belong equally to everyone, everywhere, regardless of status or location.<br>
+                 <input type="radio" name="q44" value="C"> C) Differ based on religious beliefs.<br>
+                 <input type="radio" name="q44" value="D"> D) Are determined by economic status.
+             </div>
+             <div class="form-group">
+                 <label>45. The 'Indivisibility' and 'Interdependence' of human rights imply that:</label>
+                 <input type="radio" name="q45" value="A" required> A) Civil and political rights are more important than economic and social rights.<br>
+                 <input type="radio" name="q45" value="B"> B) Different categories of rights (civil, political, economic, social, cultural) are interconnected and equally important.<br>
+                 <input type="radio" name="q45" value="C"> C) Rights can be enjoyed selectively.<br>
+                 <input type="radio" name="q45" value="D"> D) Governments can choose which rights to respect.
+             </div>
+             <div class="form-group">
+                 <label>46. Civil and Political Rights (First Generation Rights) typically include:</label>
+                 <input type="radio" name="q46" value="A" required> A) Right to education, right to health care.<br>
+                 <input type="radio" name="q46" value="B"> B) Right to life, freedom from torture, freedom of speech, right to vote.<br>
+                 <input type="radio" name="q46" value="C"> C) Right to development, right to a clean environment.<br>
+                 <input type="radio" name="q46" value="D"> D) Right to form trade unions, right to social security.
+             </div>
+             <div class="form-group">
+                 <label>47. Social, Economic, and Cultural Rights (Second Generation Rights) often include:</label>
+                 <input type="radio" name="q47" value="A" required> A) Freedom of assembly, freedom of religion.<br>
+                 <input type="radio" name="q47" value="B"> B) Right to due process, right to a fair trial.<br>
+                 <input type="radio" name="q47" value="C"> C) Right to work, right to education, right to health, right to social security.<br>
+                 <input type="radio" name="q47" value="D"> D) Right to self-determination, right to peace.
+             </div>
+             <div class="form-group">
+                 <label>48. Solidarity or Group Rights (Third Generation Rights) focus on collective rights such as:</label>
+                 <input type="radio" name="q48" value="A" required> A) Right to property, freedom of contract.<br>
+                 <input type="radio" name="q48" value="B"> B) Right to development, right to peace, right to a clean environment.<br>
+                 <input type="radio" name="q48" value="C"> C) Freedom from arbitrary arrest, right to privacy.<br>
+                 <input type="radio" name="q48" value="D"> D) Right to vote, freedom of expression.
+             </div>
+             <div class="form-group">
+                 <label>49. Derogation of human rights refers to:</label>
+                 <input type="radio" name="q49" value="A" required> A) The normal, everyday limitations on rights (e.g., restrictions on free speech for libel).<br>
+                 <input type="radio" name="q49" value="B"> B) The temporary suspension of certain rights during a state of emergency.<br>
+                 <input type="radio" name="q49" value="C"> C) The permanent abolition of human rights.<br>
+                 <input type="radio" name="q49" value="D"> D) Granting additional rights to certain groups.
+             </div>
+             <div class="form-group">
+                 <label>50. Non-derogable rights are those that:</label>
+                 <input type="radio" name="q50" value="A" required> A) Can be suspended under any circumstances.<br>
+                 <input type="radio" name="q50" value="B"> B) Are considered fundamental and cannot be suspended even during emergencies (e.g., freedom from torture).<br>
+                 <input type="radio" name="q50" value="C"> C) Apply only during peacetime.<br>
+                 <input type="radio" name="q50" value="D"> D) Are protected only by international law, not domestic law.
+             </div>
 
             <button type="button" onclick="showReview()">Submit</button>
         </form>
@@ -462,9 +461,9 @@
         let quizData = null;
         let formData = null;
         const { jsPDF } = window.jspdf;
-        const TOTAL_QUESTIONS = 50; // Total number of questions
+        const TOTAL_QUESTIONS = 50; // Back to 50 questions
 
-        // Valid login credentials
+        // Valid login credentials (Remains the same)
         const validCredentials = [
             { username: 'section19', password: '123' },
             { username: 'section20', password: '123' },
@@ -473,73 +472,76 @@
             // Add more valid credentials as needed
         ];
 
-        // Structure holding question texts and choices (NEW SET: FALLACIES Ch5)
+        // **** NEW SET: Chapter 5 Questions ****
         const allQuestionsData = {
-             q1: { text: 'A fallacy is defined as:', choices: { A: 'An argument with only false premises.', B: 'A defect in an argument consisting of something other than merely false premises.', C: 'Any argument that fails to persuade the audience.', D: 'A valid argument with a false conclusion.' } },
-             q2: { text: 'Fallacies often involve mistakes in reasoning or:', choices: { A: 'The use of overly complex language.', B: 'The creation of an illusion that makes a bad argument appear good.', C: 'Having too many premises.', D: 'A conclusion that is obviously true.' } },
-             q3: { text: 'A "formal fallacy" is a defect related to the argument\'s:', choices: { A: 'Content and subject matter.', B: 'Emotional appeal.', C: 'Structure or form.', D: 'Number of premises.' } },
-             q4: { text: 'An "informal fallacy" is a defect identified primarily through analyzing the argument\'s:', choices: { A: 'Structure or form.', B: 'Content and meaning.', C: 'Grammatical correctness.', D: 'Length.' } },
-             q5: { text: 'Formal fallacies are found only in which type of argument?', choices: { A: 'Inductive arguments.', B: 'Arguments from analogy.', C: 'Deductive arguments with identifiable forms.', D: 'Arguments based on statistics.' } },
-             q6: { text: 'The fallacy exemplified by the form "If A, then B. B. Therefore, A" is known as:', choices: { A: 'Denying the antecedent.', B: 'Affirming the consequent.', C: 'Modus ponens.', D: 'Modus tollens.' } },
-             q7: { text: 'Informal fallacies like the "plants" example (All factories are plants...) often arise from issues like:', choices: { A: 'Invalid deductive structure.', B: 'Ambiguity in the meaning of terms.', C: 'Having too few premises.', D: 'False premises only.' } },
-             q8: { text: 'Fallacies of Relevance share the common characteristic that their premises are:', choices: { A: 'Logically relevant but factually false.', B: 'Too complex to understand.', C: 'Logically irrelevant to the conclusion (though perhaps psychologically relevant).', D: 'Sufficient but unacceptable.' } },
-             q9: { text: 'The Appeal to Force (Argumentum ad Baculum) fallacy occurs when an arguer:', choices: { A: 'Uses logically sound reasoning.', B: 'Cites an unqualified authority.', C: 'Poses a threat (physical or psychological) to persuade acceptance of a conclusion.', D: 'Evokes pity from the listener.' } },
-             q10: { text: 'The Appeal to Pity (Argumentum ad Misericordiam) fallacy involves:', choices: { A: 'Attacking the opponent\'s character.', B: 'Attempting to support a conclusion merely by evoking pity.', C: 'Applying a general rule to a case it wasn\'t meant to cover.', D: 'Using ambiguous language.' } },
-             q11: { text: 'The Appeal to People (Argumentum ad Populum) fallacy attempts persuasion by appealing to:', choices: { A: 'Logical evidence.', B: 'The testimony of qualified experts.', C: 'The desire for acceptance, esteem, or belonging within a group.', D: 'A small, unrepresentative sample.' } },
-             q12: { text: 'The "direct approach" of Appeal to People involves:', choices: { A: 'Focusing on an individual\'s relationship to the crowd.', B: 'Citing specific authorities.', C: 'Exciting the emotions of a large crowd to win acceptance (mob mentality).', D: 'Using complex statistical data.' } },
-             q13: { text: 'The "Bandwagon" form of indirect Appeal to People argues that:', choices: { A: 'A product is good because an admired person uses it.', B: 'A position is correct because the majority accepts it.', C: 'An idea is superior because only a select few accept it.', D: 'A conclusion follows from pity.' } },
-             q14: { text: 'The "Appeal to Vanity" associates a product or idea with:', choices: { A: 'The majority opinion.', B: 'Logical necessity.', C: 'Someone who is admired or pursued.', D: 'Scientific evidence.' } },
-             q15: { text: 'The "Appeal to Snobbery" suggests an idea/product is desirable because:', choices: { A: 'It is accepted by most people.', B: 'It makes one part of a select, superior group.', C: 'It evokes feelings of pity.', D: 'It involves a threat.' } },
-             q16: { text: 'The Argument Against the Person (Argumentum ad Hominem) fallacy occurs when:', choices: { A: 'An arguer appeals to the majority.', B: 'An arguer attacks the character or circumstances of the opposing arguer instead of the argument itself.', C: 'An arguer misrepresents the opponent\'s argument.', D: 'An arguer applies a general rule inappropriately.' } },
-             q17: { text: 'The "Ad Hominem Abusive" fallacy involves:', choices: { A: 'Pointing out the opponent\'s circumstances.', B: 'Claiming the opponent is hypocritical.', C: 'Verbally abusing the opponent.', D: 'Misrepresenting the opponent\'s argument.' } },
-             q18: { text: 'The "Ad Hominem Circumstantial" fallacy attempts to discredit an argument by:', choices: { A: 'Verbally abusing the opponent.', B: 'Alluding to circumstances that allegedly affect the opponent, suggesting predisposition.', C: 'Citing an unqualified authority.', D: 'Pointing out that the opponent doesn\'t follow their own advice.' } },
-             q19: { text: 'The "Tu Quoque" (You Too) fallacy involves attempting to make the first arguer appear:', choices: { A: 'Unintelligent.', B: 'Unqualified.', C: 'Hypocritical or arguing in bad faith.', D: 'Emotionally unstable.' } },
-             q20: { text: 'The fallacy of "Accident" is committed when:', choices: { A: 'A general rule is applied to a specific case it was not intended to cover.', B: 'An arguer appeals to ignorance.', C: 'A conclusion is drawn from an analogy that is not strong enough.', D: 'An arguer distorts an opponent\'s argument.' } },
-             q21: { text: 'The "Straw Man" fallacy involves:', choices: { A: 'Attacking the person making the argument.', B: 'Distorting an opponent\'s argument to make it easier to attack.', C: 'Applying a general rule incorrectly.', D: 'Appealing to pity.' } },
-             q22: { text: 'The "Missing the Point" (Ignoratio Elenchi) fallacy occurs when:', choices: { A: 'The premises support one particular conclusion, but a different, often related conclusion is drawn.', B: 'An arguer changes the subject entirely.', C: 'An arguer attacks a distorted version of the opponent\'s argument.', D: 'A general rule is misapplied.' } },
-             q23: { text: 'The "Red Herring" fallacy involves:', choices: { A: 'Attacking the person rather than the argument.', B: 'Drawing the wrong conclusion from the premises.', C: 'Distorting the opponent\'s argument.', D: 'Diverting the listener\'s attention by changing the subject to a different or subtly related one.' } },
-             q24: { text: 'How can Straw Man be distinguished from Red Herring?', choices: { A: 'Red Herring always involves two arguers, Straw Man does not.', B: 'Straw Man involves distorting the original argument, while Red Herring involves changing the subject.', C: 'Straw Man attacks the person, Red Herring attacks the argument.', D: 'Red Herring uses threats, Straw Man uses pity.' } },
-             q25: { text: 'Fallacies of Weak Induction occur because the connection between premises and conclusion is:', choices: { A: 'Logically irrelevant.', B: 'Based on ambiguity.', C: 'Too weak to support the conclusion strongly.', D: 'Based on unwarranted assumptions.' } },
-             q26: { text: 'The Appeal to Unqualified Authority (Ad Verecundiam) fallacy occurs when the cited authority:', choices: { A: 'Is a recognized expert in the relevant field.', B: 'Might lack credibility (expertise, bias, motive to lie).', C: 'Provides strong evidence.', D: 'Agrees with the majority opinion.' } },
-             q27: { text: 'The Appeal to Ignorance (Ad Ignorantiam) fallacy states that a conclusion is true because:', choices: { A: 'There is positive evidence for it.', B: 'An expert supports it.', C: 'It has not been proven false (or false because it has not been proven true).', D: 'Most people believe it.' } },
-             q28: { text: 'Hasty Generalization (Converse Accident) occurs when a conclusion about a whole group is drawn from:', choices: { A: 'A large, representative sample.', B: 'A premise based on definition.', C: 'A sample that is likely atypical (e.g., too small or not random).', D: 'A chain reaction of causes.' } },
-             q29: { text: 'The False Cause fallacy occurs when the link between premises and conclusion depends on:', choices: { A: 'A strong statistical correlation.', B: 'An imagined causal connection that probably doesn\'t exist.', C: 'A valid deductive inference.', D: 'An appeal to authority.' } },
-             q30: { text: 'The post hoc ergo propter hoc variety of False Cause assumes that because one event preceded another, the first event:', choices: { A: 'Was merely correlated with the second.', B: 'Was caused by the second event.', C: 'Caused the second event.', D: 'Was irrelevant to the second event.' } },
-             q31: { text: 'The "oversimplified cause" fallacy occurs when:', choices: { A: 'No cause can be identified for an effect.', B: 'A multitude of causes is responsible, but the arguer selects just one as the sole cause.', C: 'An effect is mistaken for a cause.', D: 'A conclusion is based on superstition.' } },
-             q32: { text: 'The Slippery Slope fallacy assumes:', choices: { A: 'A causal connection exists based only on temporal succession.', B: 'A chain reaction of events will occur, usually with insufficient evidence for the connections.', C: 'An analogy holds between two dissimilar things.', D: 'A general rule applies universally without exception.' } },
-             q33: { text: 'The Weak Analogy fallacy is committed when:', choices: { A: 'An argument uses a comparison between two things.', B: 'The analogy or similarity between the two things being compared is not strong enough to support the conclusion.', C: 'An argument draws a conclusion about a group based on a sample.', D: 'An arguer cites an expert outside their field.' } },
-             q34: { text: 'Fallacies of Presumption arise because the premises:', choices: { A: 'Are irrelevant to the conclusion.', B: 'Provide insufficient support for the conclusion.', C: 'Presume what they purport to prove.', D: 'Contain ambiguous words.' } },
-             q35: { text: 'Begging the Question (Petitio Principii) involves:', choices: { A: 'Attacking the questioner rather than the question.', B: 'Asking a question that presumes something unproven.', C: 'Assuming the truth of the conclusion one is trying to prove (often by leaving out a key premise, restating the premise, or circular reasoning).', D: 'Appealing to ignorance.' } },
-             q36: { text: 'Leaving out a possibly false key premise while creating the illusion it isn\'t needed is a form of:', choices: { A: 'Complex Question.', B: 'False Dichotomy.', C: 'Begging the Question.', D: 'Suppressed Evidence.' } },
-             q37: { text: 'Reasoning in a circle (e.g., "A is true because B is true, and B is true because A is true") is a form of:', choices: { A: 'Hasty Generalization.', B: 'Begging the Question.', C: 'Appeal to Force.', D: 'Equivocation.' } },
-             q38: { text: 'The Complex Question fallacy involves:', choices: { A: 'Asking a question that is too difficult to answer.', B: 'Asking two or more questions in the guise of a single question.', C: 'Begging the question in interrogative form.', D: 'Asking a question that has no relevance.' } },
-             q39: { text: 'The False Dichotomy (or False Binary) fallacy is committed when:', choices: { A: 'An arguer presents two alternatives as if they were the only ones available, when others exist.', B: 'A key piece of evidence is ignored.', C: 'An argument uses circular reasoning.', D: 'A question presumes an unproven condition.' } },
-             q40: { text: 'The Suppressed Evidence fallacy occurs when an arguer:', choices: { A: 'Presents irrelevant premises.', B: 'Ignores important evidence that outweighs the presented evidence and entails a different conclusion.', C: 'Uses ambiguous language.', D: 'Commits a formal fallacy.' } },
-             q41: { text: 'Fallacies of Ambiguity arise from:', choices: { A: 'Irrelevant premises.', B: 'Insufficient evidence.', C: 'An ambiguity in the meaning of words or statements.', D: 'Presuming the truth of the conclusion.' } },
-             q42: { text: 'The fallacy of Equivocation occurs when:', choices: { A: 'A statement\'s grammatical structure allows multiple interpretations.', B: 'A word or phrase is used in two different senses within the same argument.', C: 'An arguer misinterprets an opponent\'s ambiguous statement.', D: 'An attribute is improperly transferred from whole to parts.' } },
-             q43: { text: 'The fallacy of Amphiboly occurs when:', choices: { A: 'A word has multiple meanings.', B: 'An arguer draws a conclusion based on misinterpreting a grammatically ambiguous statement (often made by someone else).', C: 'An attribute is improperly transferred from parts to whole.', D: 'An arguer uses circular reasoning.' } },
-             q44: { text: 'Fallacies of Grammatical Analogy (Composition and Division) appear plausible because:', choices: { A: 'They rely on emotional appeals.', B: 'They resemble arguments with correct grammatical structures.', C: 'They always have true premises.', D: 'They use precise language.' } },
-             q45: { text: 'The fallacy of Composition involves an erroneous transference of an attribute from:', choices: { A: 'Whole to parts.', B: 'Parts to whole.', C: 'One premise to another.', D: 'Conclusion back to premises.' } },
-             q46: { text: 'Arguing that because each player on a team is excellent, the team as a whole must be excellent, likely commits the fallacy of:', choices: { A: 'Division.', B: 'Hasty Generalization.', C: 'Composition.', D: 'Accident.' } },
-             q47: { text: 'The fallacy of Division involves an erroneous transference of an attribute from:', choices: { A: 'Parts to whole.', B: 'Whole to parts.', C: 'Premises to conclusion.', D: 'One case to another via analogy.' } },
-             q48: { text: 'Arguing that because a machine is heavy, its component parts must be heavy, likely commits the fallacy of:', choices: { A: 'Composition.', B: 'Accident.', C: 'Hasty Generalization.', D: 'Division.' } },
-             q49: { text: 'How can Composition be distinguished from Hasty Generalization?', choices: { A: 'Composition applies only to deductive arguments.', B: 'Hasty Generalization moves from parts to whole, Composition from specific to general.', C: 'Composition involves transferring an attribute from parts to the whole class (collective predication), while Hasty Generalization moves from an atypical sample to a general rule (distributive predication).', D: 'Hasty Generalization uses ambiguity, Composition does not.' } },
-             q50: { text: 'How can Division be distinguished from Accident?', choices: { A: 'Division applies only to inductive arguments.', B: 'Accident moves from whole to parts, Division from general to specific.', C: 'Division involves transferring an attribute from a class/whole to its parts/members, while Accident misapplies a general rule to a specific case.', D: 'Accident uses ambiguity, Division does not.' } }
+             q1: { text: 'In a political sense, a constitution primarily signifies:', choices: { A: "The physical health of the nation's leader.", B: "The founding document or body of rules for a state's government.", C: 'The membership list of a political party.', D: 'The bylaws of a trade union.' } },
+             q2: { text: "A constitution is often described as the 'mother of all laws' because:", choices: { A: 'It is the longest legal document.', B: 'All other ordinary laws derive from and must conform to it.', C: 'It deals primarily with family law.', D: "It was written by the 'founding fathers'." } },
+             q3: { text: "The feature of 'Generality' distinguishes constitutions from other laws in that constitutions:", choices: { A: 'Provide highly detailed rules for specific situations.', B: 'Set out the general framework and fundamental principles of government.', C: 'Are only applicable to government officials.', D: 'Change frequently based on political whims.' } },
+             q4: { text: "'Permanency' as a feature of constitutions suggests they are:", choices: { A: 'Meant to be temporary and easily changed.', B: 'Intended to be stable and lasting, not subject to frequent or easy alteration.', C: 'Only relevant during times of crisis.', D: 'Rewritten after every election.' } },
+             q5: { text: "Constitutional 'Supremacy' means that:", choices: { A: 'The legislature can override the constitution at any time.', B: 'The constitution is the highest law, taking precedence over all other laws.', C: 'The executive branch is superior to the constitution.', D: 'International law always supersedes the constitution.' } },
+             q6: { text: "A 'codified document' refers to a constitution that is:", choices: { A: 'Based entirely on unwritten customs.', B: 'Written down, often in a single, systematic document.', C: 'Secret and known only to rulers.', D: 'Composed of various historical traditions.' } },
+             q7: { text: 'One of the major purposes of a constitution is to serve as a framework for government, meaning it:', choices: { A: 'Lists all citizens by name.', B: 'Details foreign policy objectives.', C: 'Organizes the operation and guides the powers of government branches.', D: 'Prescribes specific economic policies.' } },
+             q8: { text: 'Constitutions limit the powers of government primarily to:', choices: { A: 'Make the government ineffective.', B: 'Protect the rights and freedoms of citizens from arbitrary rule.', C: 'Ensure the ruling party stays in power indefinitely.', D: 'Simplify the process of law-making.' } },
+             q9: { text: 'The Preamble of a constitution, like that of the FDRE Constitution, typically serves to:', choices: { A: 'List specific criminal offences.', B: 'Outline the fundamental values, goals, and ideological basis of the state.', C: 'Detail the procedures for amending the constitution.', D: 'Name the members of the judiciary.' } },
+             q10: { text: 'A written constitution is one where:', choices: { A: 'Fundamental principles are based only on tradition.', B: 'Provisions are embodied in a single formal document or instrument.', C: 'Rules can be changed easily by the government.', D: 'Courts have no power of interpretation.' } },
+             q11: { text: 'An unwritten constitution, like that of the UK, primarily consists of:', choices: { A: 'A single, comprehensive document.', B: 'Customs, conventions, traditions, and some written laws bearing constitutional weight.', C: 'Rules dictated by the monarch alone.', D: 'Laws imposed by international bodies.' } },
+             q12: { text: 'A merit of a written constitution is that it:', choices: { A: 'Is highly flexible and adapts instantly to change.', B: 'Creates ambiguity and confusion.', C: 'Is easily accessible to citizens, providing clarity and definiteness.', D: 'Prevents judicial interpretation.' } },
+             q13: { text: 'A demerit of an unwritten constitution can be that it:', choices: { A: 'Is too rigid and difficult to change.', B: 'Is not easily accessible or clear to the public, potentially leading to confusion.', C: 'Prevents gradual adaptation.', D: 'Is unsuitable for monarchical systems.' } },
+             q14: { text: "A 'rigid' constitution is one that:", choices: { A: 'Can be amended through the ordinary legislative process.', B: 'Requires a special, more difficult procedure for amendment.', C: 'Is unwritten.', D: 'Has no provision for amendment.' } },
+             q15: { text: "A 'flexible' constitution allows for amendment through:", choices: { A: 'Only a national referendum.', B: 'A complex process involving multiple government branches.', C: 'The same process used for enacting ordinary laws, often by a simple majority.', D: 'Judicial review only.' } },
+             q16: { text: "An 'effective' constitution is one where:", choices: { A: 'The text accurately describes government limits, but these are ignored in practice.', B: 'Government practices largely correspond to the provisions of the constitution.', C: 'The constitution exists only on paper with no real power.', D: 'The amendment process is impossible.' } },
+             q17: { text: "A 'nominal' constitution exists when:", choices: { A: 'The constitution fully controls government behavior.', B: 'The text describes limits and principles, but these are largely ignored in practice.', C: 'There is no written constitutional document.', D: 'The government strictly adheres to the rule of law.' } },
+             q18: { text: 'A federal constitution is characterized by:', choices: { A: 'Concentration of all power in the central government.', B: 'Distribution of power between central (federal) and regional/state governments.', C: 'The absence of a judicial branch.', D: 'An unwritten format.' } },
+             q19: { text: 'A unitary constitution features:', choices: { A: 'Power divided between national and local units by the constitution.', B: 'Concentration of state power primarily in the hands of the central government.', C: 'Co-equal status between central and regional governments.', D: 'A requirement for all laws to be approved by regional bodies.' } },
+             q20: { text: 'Constitutionalism refers to the doctrine or belief that:', choices: { A: 'Governments should have unlimited power.', B: 'Governments should be limited by law and accountable under a constitution.', C: 'Constitutions are merely symbolic documents.', D: 'Rulers are above the law.' } },
+             q21: { text: "Prior to 1931, Ethiopia's constitutional experience was characterized by:", choices: { A: 'A series of modern, written constitutions.', B: 'An unwritten form, based on traditional documents and practices.', C: 'The complete absence of any form of legal or traditional constraints on rulers.', D: 'A system imposed by foreign powers.' } },
+             q22: { text: 'The Fetha Negest (Law of the Kings) served historically in Ethiopia as a:', choices: { A: 'Modern democratic constitution.', B: 'Religious and secular legal compilation influencing law and governance.', C: 'Declaration of independence.', D: 'Trade agreement.' } },
+             q23: { text: 'The Kibre Negest (Glory of Kings) is primarily significant for:', choices: { A: 'Establishing detailed administrative procedures.', B: 'Documenting the mythical origins and legitimizing the Solomonic dynasty.', C: 'Outlining modern human rights principles.', D: "Serving as Ethiopia's first written penal code." } },
+             q24: { text: "Ethiopia's first written constitution was promulgated in:", choices: { A: '1889', B: '1931', C: '1955', D: '1987' } },
+             q25: { text: 'The 1931 Constitution of Ethiopia primarily served to:', choices: { A: 'Establish a federal democratic republic.', B: 'Limit the powers of the nobility.', C: "Centralize state power and legitimize the Emperor's authority.", D: 'Grant universal suffrage.' } },
+             q26: { text: 'The 1955 Revised Constitution of Ethiopia, compared to the 1931 version:', choices: { A: "Significantly reduced the Emperor's powers.", B: 'Introduced federalism.', C: 'Continued to reinforce centralization but included more detailed rights provisions (though largely symbolic).', D: 'Abolished the monarchy.' } },
+             q27: { text: 'The 1987 Constitution established the:', choices: { A: 'Imperial Ethiopian Government.', B: 'Transitional Government of Ethiopia.', C: "People's Democratic Republic of Ethiopia (PDRE).", D: 'Federal Democratic Republic of Ethiopia (FDRE).' } },
+             q28: { text: 'A key feature of the 1987 PDRE Constitution was its:', choices: { A: 'Embrace of multi-party democracy.', B: 'Aim to establish a state based on Marxist-Leninist principles and a one-party system.', C: 'Restoration of the monarchy.', D: 'Strong emphasis on regional autonomy.' } },
+             q29: { text: 'The current 1995 FDRE Constitution established:', choices: { A: 'A unitary state.', B: 'A constitutional monarchy.', C: 'An ethnic-based federal system and a parliamentary republic.', D: 'A presidential system with unlimited executive power.' } },
+             q30: { text: 'Democracy, derived from Greek, literally means:', choices: { A: 'Rule by the wealthy.', B: 'Rule by the military.', C: 'Rule by the people.', D: 'Rule by the aristocracy.' } },
+             q31: { text: 'Direct democracy involves citizens:', choices: { A: 'Electing representatives to make decisions for them.', B: 'Participating directly in making laws and policy decisions.', C: 'Obeying the commands of a single ruler.', D: 'Having no say in government affairs.' } },
+             q32: { text: 'Indirect or representative democracy involves citizens:', choices: { A: 'Voting on every law themselves.', B: 'Electing officials to govern on their behalf.', C: 'Following rules set by traditional elders.', D: 'Living under military rule.' } },
+             q33: { text: 'According to Robert Dahl, a minimal condition for modern democracy includes:', choices: { A: 'State control of the media.', B: 'Elected officials chosen in frequent and fair elections.', C: 'A single-party political system.', D: 'Suppression of alternative sources of information.' } },
+             q34: { text: "The core value of 'Liberty' in democracy emphasizes:", choices: { A: 'Government control over personal choices.', B: 'Personal and political freedoms, such as freedom from arbitrary arrest and freedom of expression.', C: 'The duty to obey all government orders without question.', D: 'Economic equality above all else.' } },
+             q35: { text: "'Equality' as a democratic principle includes political equality, meaning:", choices: { A: 'Equal distribution of wealth.', B: 'All citizens having equal standing and rights in the political process (e.g., one person, one vote).', C: 'Social hierarchies based on birth.', D: 'Different voting rights based on education level.' } },
+             q36: { text: 'Popular Sovereignty implies that:', choices: { A: 'The government is the ultimate source of authority.', B: 'The ultimate source of political authority resides in the people.', C: 'Foreign powers dictate government policy.', D: 'Military leaders hold supreme power.' } },
+             q37: { text: 'Constitutional Supremacy as a democratic principle means:', choices: { A: 'The constitution can be ignored by the government.', B: 'The constitution is the highest law, binding on everyone, including the government.', C: 'Laws are made by judges, not the legislature.', D: 'The executive branch holds supreme power.' } },
+             q38: { text: "The 'Rule of Law' requires that:", choices: { A: 'Rulers are above the law.', B: 'Society is governed by laws that apply equally to everyone, including the government.', C: 'Laws can be applied arbitrarily.', D: 'Only the wealthy are subject to legal processes.' } },
+             q39: { text: 'Secularism in a democratic context generally implies:', choices: { A: 'The establishment of an official state religion.', B: 'Separation of state institutions and religious institutions.', C: 'Suppression of all religious practice.', D: 'Government funding for religious education only.' } },
+             q40: { text: "The principle of 'Separation of Powers' aims to:", choices: { A: 'Concentrate all government power in one branch.', B: 'Divide government powers among different branches (legislative, executive, judicial) to prevent tyranny.', C: 'Eliminate the judicial branch.', D: 'Make government decision-making faster.' } },
+             q41: { text: 'Democratization refers to the:', choices: { A: 'Process of transition from authoritarian rule towards a democratic regime.', B: 'Consolidation of power by a single leader.', C: 'Abandonment of elections.', D: 'Establishment of a state-controlled economy.' } },
+             q42: { text: 'Key actors in democratization often include:', choices: { A: 'Only the military.', B: 'Only international organizations.', C: 'Political parties, media, and civil society organizations.', D: 'Only the incumbent authoritarian rulers.' } },
+             q43: { text: 'Human rights are generally understood as:', choices: { A: 'Privileges granted by governments that can be easily revoked.', B: 'Basic entitlements belonging to all individuals simply because they are human.', C: 'Rights applicable only to citizens of wealthy nations.', D: 'Obligations imposed on citizens by the state.' } },
+             q44: { text: "The principle of 'Universality' of human rights means they:", choices: { A: 'Apply only in certain countries.', B: 'Belong equally to everyone, everywhere, regardless of status or location.', C: 'Differ based on religious beliefs.', D: 'Are determined by economic status.' } },
+             q45: { text: "The 'Indivisibility' and 'Interdependence' of human rights imply that:", choices: { A: 'Civil and political rights are more important than economic and social rights.', B: 'Different categories of rights (civil, political, economic, social, cultural) are interconnected and equally important.', C: 'Rights can be enjoyed selectively.', D: 'Governments can choose which rights to respect.' } },
+             q46: { text: 'Civil and Political Rights (First Generation Rights) typically include:', choices: { A: 'Right to education, right to health care.', B: 'Right to life, freedom from torture, freedom of speech, right to vote.', C: 'Right to development, right to a clean environment.', D: 'Right to form trade unions, right to social security.' } },
+             q47: { text: 'Social, Economic, and Cultural Rights (Second Generation Rights) often include:', choices: { A: 'Freedom of assembly, freedom of religion.', B: 'Right to due process, right to a fair trial.', C: 'Right to work, right to education, right to health, right to social security.', D: 'Right to self-determination, right to peace.' } },
+             q48: { text: 'Solidarity or Group Rights (Third Generation Rights) focus on collective rights such as:', choices: { A: 'Right to property, freedom of contract.', B: 'Right to development, right to peace, right to a clean environment.', C: 'Freedom from arbitrary arrest, right to privacy.', D: 'Right to vote, freedom of expression.' } },
+             q49: { text: 'Derogation of human rights refers to:', choices: { A: 'The normal, everyday limitations on rights (e.g., restrictions on free speech for libel).', B: 'The temporary suspension of certain rights during a state of emergency.', C: 'The permanent abolition of human rights.', D: 'Granting additional rights to certain groups.' } },
+             q50: { text: 'Non-derogable rights are those that:', choices: { A: 'Can be suspended under any circumstances.', B: 'Are considered fundamental and cannot be suspended even during emergencies (e.g., freedom from torture).', C: 'Apply only during peacetime.', D: 'Are protected only by international law, not domestic law.' } }
         };
 
-        // Correct answers mapped to letters (NEW SET: FALLACIES Ch5)
+        // **** NEW SET: Correct answers mapped to letters (Chapter 5) ****
         const correctAnswersMap = {
-             q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'C',
-             q6: 'B', q7: 'B', q8: 'C', q9: 'C', q10: 'B',
-             q11: 'C', q12: 'C', q13: 'B', q14: 'C', q15: 'B',
-             q16: 'B', q17: 'C', q18: 'B', q19: 'C', q20: 'A',
-             q21: 'B', q22: 'A', q23: 'D', q24: 'B', q25: 'C',
-             q26: 'B', q27: 'C', q28: 'C', q29: 'B', q30: 'C',
-             q31: 'B', q32: 'B', q33: 'B', q34: 'C', q35: 'C',
-             q36: 'C', q37: 'B', q38: 'B', q39: 'A', q40: 'B',
-             q41: 'C', q42: 'B', q43: 'B', q44: 'B', q45: 'B',
-             q46: 'C', q47: 'B', q48: 'D', q49: 'C', q50: 'C'
+             q1: 'B',  q2: 'B',  q3: 'B',  q4: 'B',  q5: 'B',
+             q6: 'B',  q7: 'C',  q8: 'B',  q9: 'B',  q10: 'B',
+             q11: 'B', q12: 'C', q13: 'B', q14: 'B', q15: 'C',
+             q16: 'B', q17: 'B', q18: 'B', q19: 'B', q20: 'B',
+             q21: 'B', q22: 'B', q23: 'B', q24: 'B', q25: 'C',
+             q26: 'C', q27: 'C', q28: 'B', q29: 'C', q30: 'C',
+             q31: 'B', q32: 'B', q33: 'B', q34: 'B', q35: 'B',
+             q36: 'B', q37: 'B', q38: 'B', q39: 'B', q40: 'B',
+             q41: 'A', q42: 'C', q43: 'B', q44: 'B', q45: 'B',
+             q46: 'B', q47: 'C', q48: 'B', q49: 'B', q50: 'B'
         };
+
+
+        // --- Functions below are adjusted for TOTAL_QUESTIONS = 50 and new content ---
 
         function checkLogin() {
             const username = document.getElementById('username').value.trim();
@@ -568,7 +570,7 @@
 
              // Check if all questions are answered
              let allAnswered = true;
-             for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  if (!data[`q${i}`]) {
                      allAnswered = false;
                      break;
@@ -588,7 +590,7 @@
                 email: data.email,
                 phone: data.phone,
                 answers: {},
-                questions: allQuestionsData // Use the predefined structure
+                questions: allQuestionsData // Use the updated structure
             };
 
             // Populate answers dynamically
@@ -602,11 +604,11 @@
                 <h3>Your Answers:</h3>
             `;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                 const qKey = `q${i}`;
                 const userAnswer = data[qKey];
                 quizData.answers[qKey] = userAnswer; // Store answer
-                const questionInfo = allQuestionsData[qKey];
+                const questionInfo = allQuestionsData[qKey]; // Use updated data
                 const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                 reviewHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
             }
@@ -637,7 +639,7 @@
 
 
             doc.setFontSize(16);
-            doc.text('Logical Reasoning and Fallacies Quiz Response', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text('Constitution, Democracy & Human Rights Quiz Response - Chapter 5', pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -647,7 +649,7 @@
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
             doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  const qKey = `q${i}`;
                  const question = quizData.questions[qKey];
                  const userAnswer = quizData.answers[qKey];
@@ -676,7 +678,7 @@
 
             }
 
-            doc.save(`fallacy_quiz_response_${quizData.id_number}.pdf`); // Updated filename
+            doc.save(`constitution_dem_hr_ch5_quiz_response_${quizData.id_number}.pdf`); // Updated filename
         }
 
         // --- MODIFIED: Sends data to your backend ---
@@ -693,9 +695,9 @@
 
                 // Calculate score
                 let score = 0;
-                for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                     const qKey = `q${i}`;
-                    if (data[qKey] === correctAnswersMap[qKey]) {
+                    if (data[qKey] === correctAnswersMap[qKey]) { // Use updated map
                         score++;
                     }
                 }
@@ -711,8 +713,8 @@
                     email: data.email,
                     phone: data.phone,
                     score: score,
-                    totalQuestions: TOTAL_QUESTIONS,
-                    quizTitle: "Logical Reasoning and Fallacies Quiz - Chapter 5", // Added title
+                    totalQuestions: TOTAL_QUESTIONS, // Now 50
+                    quizTitle: "Constitution, Democracy & Human Rights Quiz - Chapter 5", // **** UPDATED TITLE ****
                     submittedAt: new Date().toISOString()
                     // Add individual answers if needed by backend
                     // answers: quizData.answers
@@ -748,9 +750,9 @@
                             <hr>
                             <h3>Submitted Answers:</h3>
                         `;
-                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                              const qKey = `q${i}`;
-                             const questionInfo = quizData.questions[qKey];
+                             const questionInfo = quizData.questions[qKey]; // Use updated data
                              const userAnswer = quizData.answers[qKey];
                              const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                              submissionHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
@@ -821,10 +823,10 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey];
-                 const correctText = allQuestionsData[qKey].choices[correctLetter];
+                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
+                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`; // Changed format slightly
              }
 
@@ -834,12 +836,12 @@
             const answersDiv = document.getElementById('answers');
             let answersHTML = '<h3>Detailed Results:</h3>';
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey];
+                 const question = quizData.questions[qKey]; // Use updated data
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey];
+                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
 
                  answersHTML += `
                     <div class="question-result">
@@ -858,7 +860,7 @@
             answersDiv.innerHTML = answersHTML;
 
 
-            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`;
+            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`; // TOTAL_QUESTIONS is now 50
         }
 
         function downloadPDF() {
@@ -873,15 +875,15 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey];
-                 const correctText = allQuestionsData[qKey].choices[correctLetter];
+                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
+                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`;
              }
 
             doc.setFontSize(16);
-            doc.text('Logical Reasoning and Fallacies Quiz Results', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text('Constitution, Democracy & Human Rights Quiz Results - Chapter 5', pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -892,17 +894,17 @@
             doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
 
             doc.setFont('helvetica', 'bold');
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 50
             y += 10;
             doc.setFont('helvetica', 'normal');
 
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 50)
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey];
+                 const question = quizData.questions[qKey]; // Use updated data
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey];
+                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
                  const questionText = question.text;
                  const correctAnswerFull = displayCorrectAnswers[qKey];
 
@@ -949,9 +951,9 @@
             if (y > pageHeight - margin) { doc.addPage(); y = margin; }
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(14);
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 50
 
-            doc.save(`fallacy_quiz_results_${quizData.id_number}.pdf`); // Updated filename
+            doc.save(`constitution_dem_hr_ch5_quiz_results_${quizData.id_number}.pdf`); // Updated filename
         }
     </script>
 </body>
