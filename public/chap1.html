@@ -457,11 +457,16 @@
         <button id="download-pdf" onclick="downloadPDF()">Download Results PDF</button>
     </div>
 
-    <script>
+        <script>
         let quizData = null;
         let formData = null;
         const { jsPDF } = window.jspdf;
         const TOTAL_QUESTIONS = 50; // Total number of questions remains 50
+
+        // *** ADD THIS LINE ***
+        // Define the chapter number for THIS specific quiz file (Chapter 1)
+        const CURRENT_QUIZ_CHAPTER = 1;
+
 
         // Valid login credentials (Remains the same)
         const validCredentials = [
@@ -472,7 +477,7 @@
             // Add more valid credentials as needed
         ];
 
-        // **** NEW SET: Civics and Ethics Questions ****
+        // **** NEW SET: Civics and Ethics Questions (Remains the same) ****
         const allQuestionsData = {
             q1: { text: 'Civic education is fundamentally concerned with:', choices: { A: 'The history of ancient civilizations.', B: 'The rights and responsibilities of citizens within a political entity.', C: 'The study of international relations and diplomacy.', D: 'The development of advanced scientific principles.' } },
             q2: { text: 'the concept of a "good citizen" implies that citizenship qualities are:', choices: { A: 'Inherited genetically.', B: 'Primarily developed through economic success.', C: 'Learned and developed, not inherent at birth.', D: 'Only relevant in monarchical systems of government.' } },
@@ -505,7 +510,7 @@
             q29: { text: ' skillful manpower lacking positive attitudes might lead to:', choices: { A: 'Increased national productivity.', B: 'Greater innovation and creativity.', C: 'Problems like corruption, bribery, and absenteeism.', D: 'More efficient government services.' } },
             q30: { text: "The concept of 'inter-culturalism' in civic education is presented as a step beyond multiculturalism by emphasizing:", choices: { A: 'Segregation of different cultural groups.', B: 'Assimilation of minority cultures into the dominant one.', C: 'Dynamic exchange, dialogue, and reciprocity between cultures.', D: 'Simply acknowledging the existence of diverse cultures.' } },
             q31: { text: "Addressing 'inclusiveness' in civics and ethics aims to:", choices: { A: 'Maintain traditional gender roles in public and private life.', B: "Focus solely on increasing women's quotas in formal politics.", C: 'Nurture equitable relations, recognizing gender differences in all spheres.', D: 'Exclude discussions of gender from the curriculum.' } },
-            q32: { text: "Civic education's contribution to 'peace-building' involves developing competencies in:", choices: { A: 'Military strategy and tactics.', B: 'Economic negotiation and trade deals.', C: 'Peacemaking, non-violent conflict resolution, and reconciliation.', D: 'Suppressing dissent and opposition.' } },
+            q32: { text: "Civic education's contribution to 'peace-building' involves developing competencies in:", choices: { A: 'Military strategy and tactics.', B: 'Economic negotiation and trade deals.', C: 'Peacemaking, non-violent conflict resolution, and reconciliation.', D: 'Suppression of dissent and opposition.' } },
             q33: { text: 'A core value promoted by Moral and Civics Education, listed explicitly, is:', choices: { A: 'Pursuit of individual wealth above all else.', B: 'Unquestioning obedience to authority.', C: 'Respect for diversity.', D: 'Strict adherence to tradition.' } },
             q34: { text: 'democracy requires ___________ from its citizens for it to be vibrant.', choices: { A: 'Apathy and disengagement', B: 'Financial contributions only', C: 'Engagement and participation', D: 'Uniformity of opinion' } },
             q35: { text: 'The need to "revitalize" citizenship education stems partly from:', choices: { A: 'An overemphasis on active participation in the past.', B: 'A perceived neglect of the field and the need for democratic citizenship focus.', C: 'The success of purely teacher-centered instruction methods.', D: 'The irrelevance of civics in modern society.' } },
@@ -589,7 +594,8 @@
                 email: data.email,
                 phone: data.phone,
                 answers: {},
-                questions: allQuestionsData // Use the updated structure
+                questions: allQuestionsData, // Use the updated structure
+                chapter: CURRENT_QUIZ_CHAPTER // *** ADDED CHAPTER TO quizData for PDF/Display ***
             };
 
             // Populate answers dynamically
@@ -599,6 +605,7 @@
                 <p><strong>Section:</strong> ${data.section}</p>
                 <p><strong>Email:</strong> ${data.email}</p>
                 <p><strong>Phone Number:</strong> ${data.phone}</p>
+                 <p><strong>Chapter:</strong> ${CURRENT_QUIZ_CHAPTER}</p> <!-- *** ADDED TO REVIEW DISPLAY *** -->
                 <hr>
                 <h3>Your Answers:</h3>
             `;
@@ -638,7 +645,7 @@
 
 
             doc.setFontSize(16);
-            doc.text('Civics and Ethics Quiz Response', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text(`Civics and Ethics Quiz Chapter ${CURRENT_QUIZ_CHAPTER} Response`, pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -646,7 +653,9 @@
             doc.text(`ID: ${quizData.id_number}`, margin, y); y += 7;
             doc.text(`Section: ${quizData.section}`, margin, y); y += 7;
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
-            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
+            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 7; // Added phone
+            doc.text(`Chapter: ${CURRENT_QUIZ_CHAPTER}`, margin, y); y += 10; // *** ADDED TO PDF ***
+
 
             for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS
                  const qKey = `q${i}`;
@@ -677,7 +686,8 @@
 
             }
 
-            doc.save(`civics_ethics_quiz_response_${quizData.id_number}.pdf`); // Updated filename
+            // *** UPDATED FILENAME ***
+            doc.save(`mcie1012_chap${CURRENT_QUIZ_CHAPTER}_response_${quizData.id_number}.pdf`);
         }
 
         // --- MODIFIED: Sends data to your backend ---
@@ -701,7 +711,7 @@
                     }
                 }
 
-                // Update quizData with score
+                // Update quizData with score (Optional but good practice if needed elsewhere)
                 quizData.score = score;
 
                 // Prepare data for YOUR backend
@@ -713,11 +723,16 @@
                     phone: data.phone,
                     score: score,
                     totalQuestions: TOTAL_QUESTIONS,
-                    quizTitle: "Civics and Ethics Quiz", // **** UPDATED TITLE ****
-                    submittedAt: new Date().toISOString()
-                    // Add individual answers if needed by backend
+                    // quizTitle: "Civics and Ethics Quiz", // You can keep or remove this, it's not used by your backend insert
+                    // submittedAt: new Date().toISOString(), // You can keep or remove this
+                    // Add individual answers if needed by backend (Your backend schema doesn't have a place for this)
                     // answers: quizData.answers
+
+                    // *** ADD THIS LINE TO INCLUDE THE CHAPTER NUMBER ***
+                    quizChapter: CURRENT_QUIZ_CHAPTER,
                 };
+
+                console.log("Submitting quiz data:", submissionData);
 
                 try {
                     // Show "Submitting..." message or spinner here if desired
@@ -736,9 +751,10 @@
                     if (response.ok) {
                         // --- SUCCESS HANDLING (From YOUR backend) ---
                         const result = await response.json(); // Assuming your backend sends JSON back
-                        console.log("Submission successful:", result);
+                        console.log('Submission successful:', result);
+                        alert("Quiz submitted successfully!"); // Provide feedback to user
 
-                        // Show submission copy (Same as before)
+                        // Hide review and show submission copy (same as before)
                         const submissionContent = document.getElementById('submission-content');
                          let submissionHTML = `
                             <p><strong>Name:</strong> ${quizData.name}</p>
@@ -746,6 +762,7 @@
                             <p><strong>Section:</strong> ${quizData.section}</p>
                             <p><strong>Email:</strong> ${quizData.email}</p>
                             <p><strong>Phone Number:</strong> ${quizData.phone}</p>
+                            <p><strong>Chapter:</strong> ${CURRENT_QUIZ_CHAPTER}</p> <!-- *** ADDED TO SUBMISSION COPY *** -->
                             <hr>
                             <h3>Submitted Answers:</h3>
                         `;
@@ -829,8 +846,9 @@
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`; // Changed format slightly
              }
 
+            // *** ADDED CHAPTER TO RESULTS DISPLAY ***
+            document.getElementById('student-info').innerHTML = `<strong>Name:</strong> ${quizData.name}<br><strong>ID:</strong> ${quizData.id_number}<br><strong>Section:</strong> ${quizData.section}<br><strong>Email:</strong> ${quizData.email}<br><strong>Phone:</strong> ${quizData.phone}<br><strong>Chapter:</strong> ${CURRENT_QUIZ_CHAPTER}`;
 
-            document.getElementById('student-info').innerHTML = `<strong>Name:</strong> ${quizData.name}<br><strong>ID:</strong> ${quizData.id_number}<br><strong>Section:</strong> ${quizData.section}<br><strong>Email:</strong> ${quizData.email}<br><strong>Phone:</strong> ${quizData.phone}`;
 
             const answersDiv = document.getElementById('answers');
             let answersHTML = '<h3>Detailed Results:</h3>';
@@ -882,7 +900,7 @@
              }
 
             doc.setFontSize(16);
-            doc.text('Civics and Ethics Quiz Results', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text(`Civics and Ethics Quiz Chapter ${CURRENT_QUIZ_CHAPTER} Results`, pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -890,7 +908,9 @@
             doc.text(`ID: ${quizData.id_number}`, margin, y); y += 7;
             doc.text(`Section: ${quizData.section}`, margin, y); y += 7;
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
-            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
+            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 7; // Added phone
+            doc.text(`Chapter: ${CURRENT_QUIZ_CHAPTER}`, margin, y); y += 10; // *** ADDED TO PDF ***
+
 
             doc.setFont('helvetica', 'bold');
             doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
@@ -909,22 +929,32 @@
 
                  // Estimate space needed
                  const qLines = doc.splitTextToSize(`Question ${i}: ${questionText}`, effectiveWidth);
-                 const choicesLines = 4 * 5; // Estimate for 4 choices
+                 // Assuming choices are short enough for single line, if not, adjust this estimate
+                 const choicesLines = 4 * 5; // Estimate for 4 choices at 5 units per line height
                  const yourAnsLines = doc.splitTextToSize(`Your answer: ${userAnswer}) ${userAnswerText} ${isCorrect ? '(Correct)' : '(Incorrect)'}`, effectiveWidth);
-                 const correctAnsLines = isCorrect ? 0 : doc.splitTextToSize(`Correct answer: ${correctAnswerFull}`, effectiveWidth).length * 5;
-                 const spaceNeeded = (qLines.length * 5) + 2 + choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLines + 5;
+                 const correctAnsLinesHeight = isCorrect ? 0 : doc.splitTextToSize(`Correct answer: ${correctAnswerFull}`, effectiveWidth).length * 5; // Height needed for correct answer if wrong
+                 const spaceNeeded = (qLines.length * 5) + 2 + choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLinesHeight + 5;
 
-                 if (y + spaceNeeded > pageHeight - margin) { // Check if content fits
+
+                 if (y + spaceNeeded > pageHeight - margin) { // Check if content fits on current page with some buffer
                     doc.addPage();
-                    y = margin;
+                    y = margin; // Reset y position for the new page
                 }
 
                 doc.setFont('helvetica', 'bold');
                 doc.text(qLines, margin, y);
-                y += (qLines.length * 5) + 2; // Adjust spacing
+                y += (qLines.length * 5) + 2; // Adjust spacing based on lines
                 doc.setFont('helvetica', 'normal');
 
-                if (y > pageHeight - margin * 3) { doc.addPage(); y = margin; } // Check space for choices/answers
+                 // Check if choices/answers will fit after the question
+                 const remainingSpaceAfterQuestion = pageHeight - margin - y;
+                 const answersSectionSpace = choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLinesHeight + 5;
+
+                 if (answersSectionSpace > remainingSpaceAfterQuestion) {
+                     doc.addPage();
+                     y = margin; // Start choices/answers on a new page
+                 }
+
 
                 doc.setFontSize(10); // Slightly smaller for choices if needed
                 doc.text(`  A) ${question.choices.A}`, margin + 5, y); y += 5;
@@ -933,7 +963,6 @@
                 doc.text(`  D) ${question.choices.D}`, margin + 5, y); y += 7;
                 doc.setFontSize(12); // Reset font size
 
-                if (y > pageHeight - margin * 2) { doc.addPage(); y = margin; } // Check space for answers
 
                 doc.text(`Your answer: ${userAnswer}) ${userAnswerText} ${isCorrect ? '(Correct)' : '(Incorrect)'}`, margin, y); y += 7;
 
@@ -952,7 +981,8 @@
             doc.setFontSize(14);
             doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
 
-            doc.save(`civics_ethics_quiz_results_${quizData.id_number}.pdf`); // Updated filename
+            // *** UPDATED FILENAME ***
+            doc.save(`mcie1012_chap${CURRENT_QUIZ_CHAPTER}_results_${quizData.id_number}.pdf`);
         }
     </script>
 </body>
