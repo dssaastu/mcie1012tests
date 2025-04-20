@@ -318,11 +318,21 @@
         <button id="download-pdf" onclick="downloadPDF()">Download Results PDF</button>
     </div>
 
-    <script>
+        <script>
         let quizData = null;
         let formData = null;
         const { jsPDF } = window.jspdf;
-        const TOTAL_QUESTIONS = 30; // **** UPDATED Total number of questions ****
+        // **** UPDATED Total number of questions ****
+        const TOTAL_QUESTIONS = 30;
+
+        // *** ADD THIS LINE - SET CHAPTER TO 3 ***
+        // Define the chapter number for THIS specific quiz file (Chapter 3)
+        const CURRENT_QUIZ_CHAPTER = 3;
+
+        // *** ADD THIS LINE ***
+        // Define the course code
+        const COURSE_CODE = 'MCIE1012';
+
 
         // Valid login credentials (Remains the same)
         const validCredentials = [
@@ -333,7 +343,7 @@
             // Add more valid credentials as needed
         ];
 
-        // **** NEW SET: Chapter 3 Questions ****
+        // **** UPDATED SET: Chapter 3 Questions (Matches the HTML form questions) ****
         const allQuestionsData = {
              q1: { text: 'A primary function of morality, as described in the chapter introduction, is to:', choices: { A: 'Eliminate all personal desires.', B: 'Provide guidance in making decisions and resolving conflicts.', C: 'Ensure everyone achieves maximum wealth.', D: 'Document historical events accurately.' } },
              q2: { text: "An 'instrumental good' is valued because:", choices: { A: 'Of its inherent nature and worth in itself.', B: 'It serves as a means to attain other desired goods.', C: 'It is universally desired by all people.', D: 'It aligns with religious doctrine.' } },
@@ -367,7 +377,7 @@
              q30: { text: 'According to the chapter summary, ethical theories and principles serve as:', choices: { A: 'Definitive algorithms that provide easy answers to all moral questions.', B: 'Historical curiosities with no practical relevance.', C: 'Foundations and viewpoints for ethical analysis and decision-making.', D: 'Replacements for factual investigation.' } }
         };
 
-        // **** NEW SET: Correct answers mapped to letters (Chapter 3) ****
+        // **** UPDATED SET: Correct answers mapped to letters (Chapter 3 - Matches the HTML form answers) ****
         const correctAnswersMap = {
              q1: 'B',  q2: 'B',  q3: 'C',  q4: 'D',  q5: 'C',
              q6: 'B',  q7: 'B',  q8: 'B',  q9: 'C',  q10: 'D',
@@ -377,7 +387,7 @@
              q26: 'C', q27: 'A', q28: 'B', q29: 'B', q30: 'C'
         };
 
-        // --- Functions below are adjusted for TOTAL_QUESTIONS = 30 and new content ---
+        // --- Functions below modified to include chapter and formatted string ---
 
         function checkLogin() {
             const username = document.getElementById('username').value.trim();
@@ -406,7 +416,7 @@
 
              // Check if all questions are answered
              let allAnswered = true;
-             for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+             for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS
                  if (!data[`q${i}`]) {
                      allAnswered = false;
                      break;
@@ -426,8 +436,14 @@
                 email: data.email,
                 phone: data.phone,
                 answers: {},
-                questions: allQuestionsData // Use the updated structure
+                questions: allQuestionsData, // Use the updated structure
+                chapter: CURRENT_QUIZ_CHAPTER, // Added chapter to quizData
+                courseCode: COURSE_CODE // Added course code to quizData
             };
+
+            // Construct the formatted chapter string for display
+             const formattedCourseChapter = `${quizData.courseCode} Chapter ${quizData.chapter}`;
+
 
             // Populate answers dynamically
             let reviewHTML = `
@@ -436,15 +452,17 @@
                 <p><strong>Section:</strong> ${data.section}</p>
                 <p><strong>Email:</strong> ${data.email}</p>
                 <p><strong>Phone Number:</strong> ${data.phone}</p>
+                 <p><strong>Chapter:</strong> ${quizData.chapter}</p>
+                 <p><strong>Course & Chapter:</strong> ${formattedCourseChapter}</p> <!-- Added formatted chapter to review display -->
                 <hr>
                 <h3>Your Answers:</h3>
             `;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                 const qKey = `q${i}`;
                 const userAnswer = data[qKey];
                 quizData.answers[qKey] = userAnswer; // Store answer
-                const questionInfo = allQuestionsData[qKey]; // Use updated data
+                const questionInfo = allQuestionsData[qKey];
                 const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                 reviewHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
             }
@@ -473,9 +491,11 @@
             const margin = 10;
             const effectiveWidth = pageWidth - margin * 2;
 
+             const formattedCourseChapter = `${quizData.courseCode} Chapter ${quizData.chapter}`;
+
 
             doc.setFontSize(16);
-            doc.text('Ethical Decision Making Quiz Response - Chapter 3', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text(`${formattedCourseChapter} Quiz Response`, pageWidth / 2, y, { align: 'center' }); // Updated Title
             y += 10;
 
             doc.setFontSize(12);
@@ -483,9 +503,12 @@
             doc.text(`ID: ${quizData.id_number}`, margin, y); y += 7;
             doc.text(`Section: ${quizData.section}`, margin, y); y += 7;
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
-            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
+            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 7;
+            doc.text(`Chapter: ${quizData.chapter}`, margin, y); y += 7;
+            doc.text(`Course & Chapter: ${formattedCourseChapter}`, margin, y); y += 10;
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                  const qKey = `q${i}`;
                  const question = quizData.questions[qKey];
                  const userAnswer = quizData.answers[qKey];
@@ -495,29 +518,30 @@
                  // Estimate space needed for the question + answer
                  const questionLines = doc.splitTextToSize(`Question ${i}: ${questionText}`, effectiveWidth);
                  const answerLines = doc.splitTextToSize(`Your answer: ${userAnswer}) ${answerText}`, effectiveWidth);
-                 const spaceNeeded = (questionLines.length * 5) + 2 + (answerLines.length * 5) + 5; // Estimate lines * line height + spacing
+                 const spaceNeeded = (questionLines.length * 5) + 2 + (answerLines.length * 5) + 5;
 
-                 if (y + spaceNeeded > pageHeight - margin) { // Check if content fits
+                 if (y + spaceNeeded > pageHeight - margin) {
                     doc.addPage();
                     y = margin;
                  }
 
                 doc.setFont('helvetica', 'bold');
                 doc.text(questionLines, margin, y);
-                y += (questionLines.length * 5) + 2; // Adjust spacing based on lines
+                y += (questionLines.length * 5) + 2;
                 doc.setFont('helvetica', 'normal');
 
-                if (y > pageHeight - margin) { doc.addPage(); y = margin; } // Re-check just for answer part
+                if (y > pageHeight - margin) { doc.addPage(); y = margin; }
 
                 doc.text(answerLines, margin, y);
-                y += (answerLines.length * 5) + 5; // Add space after the answer
+                y += (answerLines.length * 5) + 5;
 
             }
 
-            doc.save(`ethical_decision_ch3_quiz_response_${quizData.id_number}.pdf`); // Updated filename
+            // Updated filename
+            doc.save(`${formattedCourseChapter.replace(/ /g, '_')}_response_${quizData.id_number}.pdf`);
         }
 
-        // --- MODIFIED: Sends data to your backend ---
+        // --- MODIFIED: confirmSubmission Function ---
         async function confirmSubmission() {
             if (confirm('Are you sure you want to submit your answers?')) {
                 if (!quizData || !formData) {
@@ -527,19 +551,23 @@
                      return;
                 }
 
-                const data = Object.fromEntries(formData); // Use the stored formData
+                const data = Object.fromEntries(formData);
 
                 // Calculate score
                 let score = 0;
-                for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+                for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                     const qKey = `q${i}`;
-                    if (data[qKey] === correctAnswersMap[qKey]) { // Use updated map
+                    if (data[qKey] === correctAnswersMap[qKey]) {
                         score++;
                     }
                 }
 
-                // Update quizData with score
+                // Update quizData with score (Optional but good practice)
                 quizData.score = score;
+
+                // *** CONSTRUCT THE FORMATTED CHAPTER STRING ***
+                const formattedCourseChapter = `${COURSE_CODE} Chapter ${CURRENT_QUIZ_CHAPTER}`;
+
 
                 // Prepare data for YOUR backend
                 const submissionData = {
@@ -549,17 +577,21 @@
                     email: data.email,
                     phone: data.phone,
                     score: score,
-                    totalQuestions: TOTAL_QUESTIONS, // Now 30
-                    quizTitle: "Ethical Decision Making Quiz - Chapter 3", // **** UPDATED TITLE ****
-                    submittedAt: new Date().toISOString()
-                    // Add individual answers if needed by backend
-                    // answers: quizData.answers
+                    totalQuestions: TOTAL_QUESTIONS,
+                    quizChapter: CURRENT_QUIZ_CHAPTER, // Keep the integer
+                    // quizTitle: "Ethical Decision Making Quiz - Chapter 3", // You can keep or remove this
+                    // submittedAt: new Date().toISOString(),
+                    // answers: quizData.answers // You can add this if your backend table had a jsonb column for answers
+
+                    // *** ADD THE NEW FIELD WITH THE FORMATTED STRING ***
+                    course_chapter_formatted: formattedCourseChapter,
                 };
+
+                console.log("Submitting quiz data:", submissionData);
 
                 try {
                     // Show "Submitting..." message or spinner here if desired
 
-                    // --- MODIFIED FETCH CALL ---
                     const response = await fetch('/submit-quiz', { // Point to your backend endpoint
                         method: 'POST',
                         body: JSON.stringify(submissionData), // Send the data as JSON
@@ -568,14 +600,13 @@
                             'Content-Type': 'application/json' // Important Header!
                         }
                     });
-                    // --- END MODIFIED FETCH CALL ---
 
                     if (response.ok) {
-                        // --- SUCCESS HANDLING (From YOUR backend) ---
-                        const result = await response.json(); // Assuming your backend sends JSON back
-                        console.log("Submission successful:", result);
+                        const result = await response.json();
+                        console.log('Submission successful:', result);
+                        alert("Quiz submitted successfully!"); // Provide feedback to user
 
-                        // Show submission copy (Same as before)
+                        // Show submission copy
                         const submissionContent = document.getElementById('submission-content');
                          let submissionHTML = `
                             <p><strong>Name:</strong> ${quizData.name}</p>
@@ -583,12 +614,14 @@
                             <p><strong>Section:</strong> ${quizData.section}</p>
                             <p><strong>Email:</strong> ${quizData.email}</p>
                             <p><strong>Phone Number:</strong> ${quizData.phone}</p>
+                            <p><strong>Chapter:</strong> ${quizData.chapter}</p>
+                             <p><strong>Course & Chapter:</strong> ${formattedCourseChapter}</p> <!-- Added formatted chapter to submission copy -->
                             <hr>
                             <h3>Submitted Answers:</h3>
                         `;
-                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+                         for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                              const qKey = `q${i}`;
-                             const questionInfo = quizData.questions[qKey]; // Use updated data
+                             const questionInfo = quizData.questions[qKey];
                              const userAnswer = quizData.answers[qKey];
                              const answerText = questionInfo.choices[userAnswer] || 'Not Answered';
                              submissionHTML += `<p><strong>Question ${i}:</strong> ${questionInfo.text}<br>Your answer: ${userAnswer}) ${answerText}</p>`;
@@ -597,10 +630,9 @@
 
                         document.getElementById('review-section').classList.add('hidden');
                         document.getElementById('submission-copy').classList.remove('hidden');
-                        // --- END SUCCESS HANDLING ---
+
 
                     } else {
-                        // --- ERROR HANDLING (From YOUR backend) ---
                         let errorMsg = `Submission failed with status: ${response.status}`;
                         try {
                             const errorData = await response.json();
@@ -611,19 +643,12 @@
                         document.getElementById('error-message').innerHTML = `<p>Submission failed: ${errorMsg}. Please try again.</p>`;
                         document.getElementById('error-message').classList.remove('hidden');
                         document.getElementById('review-section').classList.add('hidden');
-                        // editForm(); // Optionally go back to edit
-                        // --- END ERROR HANDLING ---
                     }
                 } catch (error) {
-                     // --- NETWORK/OTHER ERROR HANDLING ---
                     console.error('Network/Fetch error:', error);
                     document.getElementById('error-message').innerHTML = `<p>An network error occurred during submission. Please check your connection and try again.</p>`;
                     document.getElementById('error-message').classList.remove('hidden');
                     document.getElementById('review-section').classList.add('hidden');
-                    // editForm(); // Optionally go back to edit
-                    // --- END NETWORK ERROR HANDLING ---
-                } finally {
-                     // Hide "Submitting..." message or spinner here
                 }
             }
         }
@@ -659,25 +684,28 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
-                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
-                 displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`; // Changed format slightly
+                 const correctLetter = correctAnswersMap[qKey];
+                 const correctText = allQuestionsData[qKey].choices[correctLetter];
+                 displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`;
              }
 
+            const formattedCourseChapter = `${quizData.courseCode} Chapter ${quizData.chapter}`;
 
-            document.getElementById('student-info').innerHTML = `<strong>Name:</strong> ${quizData.name}<br><strong>ID:</strong> ${quizData.id_number}<br><strong>Section:</strong> ${quizData.section}<br><strong>Email:</strong> ${quizData.email}<br><strong>Phone:</strong> ${quizData.phone}`;
+            // Added formatted chapter to results display
+            document.getElementById('student-info').innerHTML = `<strong>Name:</strong> ${quizData.name}<br><strong>ID:</strong> ${quizData.id_number}<br><strong>Section:</strong> ${quizData.section}<br><strong>Email:</strong> ${quizData.email}<br><strong>Phone:</strong> ${quizData.phone}<br><strong>Chapter:</strong> ${quizData.chapter}<br><strong>Course & Chapter:</strong> ${formattedCourseChapter}`;
+
 
             const answersDiv = document.getElementById('answers');
             let answersHTML = '<h3>Detailed Results:</h3>';
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey]; // Use updated data
+                 const question = quizData.questions[qKey];
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
+                 const isCorrect = userAnswer === correctAnswersMap[qKey];
 
                  answersHTML += `
                     <div class="question-result">
@@ -696,7 +724,7 @@
             answersDiv.innerHTML = answersHTML;
 
 
-            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`; // TOTAL_QUESTIONS is now 30
+            document.getElementById('score').textContent = `Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`;
         }
 
         function downloadPDF() {
@@ -711,15 +739,17 @@
 
              // Combine correct answer letter with full text for display
              const displayCorrectAnswers = {};
-             for(let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+             for(let i = 1; i <= TOTAL_QUESTIONS; i++) {
                  const qKey = `q${i}`;
-                 const correctLetter = correctAnswersMap[qKey]; // Use updated map
-                 const correctText = allQuestionsData[qKey].choices[correctLetter]; // Use updated data
+                 const correctLetter = correctAnswersMap[qKey];
+                 const correctText = allQuestionsData[qKey].choices[correctLetter];
                  displayCorrectAnswers[qKey] = `${correctLetter}) ${correctText}`;
              }
 
+            const formattedCourseChapter = `${quizData.courseCode} Chapter ${quizData.chapter}`;
+
             doc.setFontSize(16);
-            doc.text('Ethical Decision Making Quiz Results - Chapter 3', pageWidth / 2, y, { align: 'center' }); // Updated Title
+            doc.text(`${formattedCourseChapter} Quiz Results`, pageWidth / 2, y, { align: 'center' });
             y += 10;
 
             doc.setFontSize(12);
@@ -727,69 +757,79 @@
             doc.text(`ID: ${quizData.id_number}`, margin, y); y += 7;
             doc.text(`Section: ${quizData.section}`, margin, y); y += 7;
             doc.text(`Email: ${quizData.email}`, margin, y); y += 7;
-            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 10;
+            doc.text(`Phone: ${quizData.phone}`, margin, y); y += 7;
+             // Added formatted chapter to PDF
+            doc.text(`Course & Chapter: ${formattedCourseChapter}`, margin, y); y += 10;
+
 
             doc.setFont('helvetica', 'bold');
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 30
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
             y += 10;
             doc.setFont('helvetica', 'normal');
 
 
-            for (let i = 1; i <= TOTAL_QUESTIONS; i++) { // Loop uses TOTAL_QUESTIONS (now 30)
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
                  const qKey = `q${i}`;
-                 const question = quizData.questions[qKey]; // Use updated data
+                 const question = quizData.questions[qKey];
                  const userAnswer = quizData.answers[qKey];
                  const userAnswerText = question.choices[userAnswer] || 'Not Answered';
-                 const isCorrect = userAnswer === correctAnswersMap[qKey]; // Use updated map
+                 const isCorrect = userAnswer === correctAnswersMap[qKey];
                  const questionText = question.text;
                  const correctAnswerFull = displayCorrectAnswers[qKey];
 
                  // Estimate space needed
                  const qLines = doc.splitTextToSize(`Question ${i}: ${questionText}`, effectiveWidth);
-                 const choicesLines = 4 * 5; // Estimate for 4 choices
+                 const choicesLines = 4 * 5; // Estimate for 4 choices at 5 units per line height
                  const yourAnsLines = doc.splitTextToSize(`Your answer: ${userAnswer}) ${userAnswerText} ${isCorrect ? '(Correct)' : '(Incorrect)'}`, effectiveWidth);
-                 const correctAnsLines = isCorrect ? 0 : doc.splitTextToSize(`Correct answer: ${correctAnswerFull}`, effectiveWidth).length * 5;
-                 const spaceNeeded = (qLines.length * 5) + 2 + choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLines + 5;
+                 const correctAnsLinesHeight = isCorrect ? 0 : doc.splitTextToSize(`Correct answer: ${correctAnswerFull}`, effectiveWidth).length * 5; // Height needed for correct answer if wrong
+                 const spaceNeeded = (qLines.length * 5) + 2 + choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLinesHeight + 5;
 
-                 if (y + spaceNeeded > pageHeight - margin) { // Check if content fits
+
+                 if (y + spaceNeeded > pageHeight - margin) {
                     doc.addPage();
                     y = margin;
                 }
 
                 doc.setFont('helvetica', 'bold');
                 doc.text(qLines, margin, y);
-                y += (qLines.length * 5) + 2; // Adjust spacing
+                y += (qLines.length * 5) + 2;
                 doc.setFont('helvetica', 'normal');
 
-                if (y > pageHeight - margin * 3) { doc.addPage(); y = margin; } // Check space for choices/answers
+                 const remainingSpaceAfterQuestion = pageHeight - margin - y;
+                 const answersSectionSpace = choicesLines + 7 + (yourAnsLines.length * 5) + 7 + correctAnsLinesHeight + 5;
 
-                doc.setFontSize(10); // Slightly smaller for choices if needed
+                 if (answersSectionSpace > remainingSpaceAfterQuestion) {
+                     doc.addPage();
+                     y = margin;
+                 }
+
+
+                doc.setFontSize(10);
                 doc.text(`  A) ${question.choices.A}`, margin + 5, y); y += 5;
                 doc.text(`  B) ${question.choices.B}`, margin + 5, y); y += 5;
                 doc.text(`  C) ${question.choices.C}`, margin + 5, y); y += 5;
                 doc.text(`  D) ${question.choices.D}`, margin + 5, y); y += 7;
-                doc.setFontSize(12); // Reset font size
+                doc.setFontSize(12);
 
-                if (y > pageHeight - margin * 2) { doc.addPage(); y = margin; } // Check space for answers
 
                 doc.text(`Your answer: ${userAnswer}) ${userAnswerText} ${isCorrect ? '(Correct)' : '(Incorrect)'}`, margin, y); y += 7;
 
                 if (!isCorrect) {
-                    doc.setTextColor(0, 0, 255); // Blue for correct answer when user was wrong
+                    doc.setTextColor(0, 0, 255);
                     doc.text(`Correct answer: ${correctAnswerFull}`, margin, y); y += 7;
-                    doc.setTextColor(0, 0, 0); // Reset color
+                    doc.setTextColor(0, 0, 0);
                 }
-                y += 5; // Add space between questions
+                y += 5;
 
             }
 
-            // Add score again at the end if needed, especially if it spans pages
             if (y > pageHeight - margin) { doc.addPage(); y = margin; }
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(14);
-            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' }); // TOTAL_QUESTIONS is now 30
+            doc.text(`Final Score: ${quizData.score} / ${TOTAL_QUESTIONS}`, pageWidth / 2, y, { align: 'center' });
 
-            doc.save(`ethical_decision_ch3_quiz_results_${quizData.id_number}.pdf`); // Updated filename
+            // Updated filename to include formatted chapter
+            doc.save(`${formattedCourseChapter.replace(/ /g, '_')}_results_${quizData.id_number}.pdf`);
         }
     </script>
 </body>
